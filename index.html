@@ -90,6 +90,20 @@
         <figure id="Location4"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
         
     </section>
+  
+
+     <section>
+        <div class="chart-description">
+            <h2>Section 4: Shiller PE Ratio</h2>
+            <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
+                We've organised the page into sections, with each section containing a chart, title and a description. Here, we can describe the chart and give some context.
+                As a first example, we're using a basic chart from our repo.
+            </p>
+        </div>
+        <figure id="Location5"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
+        
+    </section>   
+
     
     <!-- Do you want to add more sections? -->
         <!-- Try copying pasting the section above -->
@@ -111,6 +125,7 @@
         vegaEmbed('#Location2', figure_2_spec)
         vegaEmbed('#Location3', figure_3_spec)
         vegaEmbed('#Location4', "New_chart.json")
+        vegaEmbed('#Location5', "shiller_pe_ratio_chart.json")
         // Do you want to add more graphs?
         // try defining a new variable for figure_3_spec, adding VegaEmbed for Location3, and adding a new section in the HTML
         // e.g. 
