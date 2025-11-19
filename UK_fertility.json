@@ -1,0 +1,73 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Fertility Rate: UK in Global Context",
+    "anchor": "start",
+    "subtitle": "Births per woman | Source: UN World Population Prospects (2024)",
+    "fontSize": 16,
+    "subtitleFontSize": 12,
+    "color": "#000000",
+    "subtitleColor": "#666666"
+  },
+  "width": 500,
+  "height": 300,
+  "background": "#ffffff",
+  "data": {
+    "url": "data/children-per-woman-un.csv",
+    "format": {"type": "csv"}
+  },
+  "transform": [
+    {
+      "filter": {
+        "field": "Entity",
+        "oneOf": ["United Kingdom", "Europe (UN)", "World", "High-income countries"]
+      }
+    }
+  ],
+  "mark": {
+    "type": "line",
+    "strokeWidth": 2,
+    "point": false,
+    "tooltip": true
+  },
+  "encoding": {
+    "x": {
+      "field": "Year",
+      "type": "quantitative",
+      "scale": {"domain": [1950, 2023]},
+      "axis": {
+        "title": "",
+        "grid": false,
+        "labelAngle": 0,
+        "format": "d"
+      }
+    },
+    "y": {
+      "field": "Fertility rate - Sex: all - Age: all - Variant: estimates",
+      "type": "quantitative",
+      "scale": {"domain": [0, 6]},
+      "axis": {
+        "title": "Births per woman",
+        "grid": true,
+        "gridOpacity": 0.2
+      }
+    },
+    "color": {
+      "field": "Entity",
+      "type": "nominal",
+      "scale": {
+        "domain": ["United Kingdom", "Europe (UN)", "World", "High-income countries"],
+        "range": ["#0066cc", "#e74c3c", "#2ecc71", "#f39c12"]
+      },
+      "legend": {
+        "title": null,
+        "orient": "top-right"
+      }
+    },
+    "tooltip": [
+      {"field": "Entity", "type": "nominal", "title": "Country/Region"},
+      {"field": "Year", "type": "quantitative", "title": "Year", "format": "d"},
+      {"field": "Fertility rate - Sex: all - Age: all - Variant: estimates", "type": "quantitative", "title": "Fertility Rate", "format": ".2f"}
+    ]
+  }
+}

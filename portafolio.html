@@ -49,7 +49,8 @@
     <p style="margin-top: 0px; color: darkblue">
         <!-- we're setting the margin to 0px so the header and authour name are close together -->
         Antonia Griffin | <a href="https://www.linkedin.com/in/antonia-griffin-cuadra">LinkedIn</a> | <a
-            href="https://www.github.com/antogriffin12">GitHub</a>
+            href="https://www.github.com/antogriffin12">GitHub</a>| <a
+            href="https://antogriffin12.github.io/project.html">Project</a>
     </p>
     <h3 class="small"> <!-- We have added a class to the header called "small" which we can use to style it in the CSS -->
         This page acts as my portfolio of charts for Automated Data Visualisation for Policymaking (PP434) course.  
@@ -91,26 +92,41 @@
 
     <section>
         <div class="chart-description">
-            <h2>Section 3: UK Whole Economy</h2>
+            <h2>Section 3: Debate on pay-as-you-go pension systems in the United Kingdom</h2>
             <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
-                We've organised the page into sections, with each section containing a chart, title and a description. Here, we can describe the chart and give some context.
-                As a first example, we're using a basic chart from our repo.
+                Fertility declined from 2.7 (1950) to 1.6 (2023), below replacement level, reducing future workforce supporting pension systems.
             </p>
         </div>
         <figure id="Location5"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
-        
+            <p>
+                Life expectancy increased from 69 years (1950) to 81 years (2023), extending retirement periods and increasing total pension costs per retiree.
+            </p>
+        </div>
+        <figure id="Location6"></figure>  
+            <p>
+                Falling fertility and rising longevity strain pay-as-you-go pensions due to fewer contributors supporting more beneficiaries for extended periods, necessitating reform.
+            </p>
     </section>
   
 
      <section>
         <div class="chart-description">
-            <h2>Section 4: Shiller PE Ratio</h2>
+            <h2>Section 4: Replication. Re-create, then improve, someone else's chart.</h2>
             <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
-                We've organised the page into sections, with each section containing a chart, title and a description. Here, we can describe the chart and give some context.
-                As a first example, we're using a basic chart from our repo.
+                I chose a Finantial Times graph (https://www.ft.com/content/ddda91bd-403f-4942-86dc-f5ab52074293), an image of it is:
             </p>
         </div>
-        <figure id="Location6"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
+        <img src="FT_graph_original.png" alt="Original Sports Capital Chart" style="max-width: 80%;">
+        </div>
+            <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
+                The replica chart:
+            </p>
+        <figure id="Location7"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
+        </div>
+            <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
+                The improved chart:
+            </p>
+        <figure id="Location8"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
         
     </section>   
 
@@ -144,9 +160,10 @@
         vegaEmbed('#Location2', figure_2_spec)
         vegaEmbed('#Location3', "Japan.json")
         vegaEmbed('#Location4', "UK_unemployment_rate.json")
-        vegaEmbed('#Location5', "New_chart.json")
-        vegaEmbed('#Location6', "shiller_pe_ratio_chart.json")
-        vegaEmbed('#Location7', "TRF_live_chart.json")
+        vegaEmbed('#Location5', "UK_fertility.json")
+        vegaEmbed('#Location6', "UK_life_expectancy.json")
+        vegaEmbed('#Location7', "FT_graph_replica.json")
+        vegaEmbed('#Location8', "FT_graph_improved.json")
 
 
         console.log("0")
