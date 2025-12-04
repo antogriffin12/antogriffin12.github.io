@@ -113,10 +113,11 @@
         <div class="chart-description">
             <h2>Section 4: Replication. Re-create, then improve, someone else's chart.</h2>
             <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
-                I chose a Finantial Times graph (https://www.ft.com/content/ddda91bd-403f-4942-86dc-f5ab52074293), an image of it is:
+                I chose a ABC News graph: <code>(https://web.archive.org/web/20241007071210/https://www.abc.net.au/news/2024-10-07/about-13-million-spare-bedrooms-in-australia-housing-crisis/104439670) </code>.
+            <p>   
+                An image of it is:
             </p>
-        </div>
-        <img src="FT_graph_original.png" alt="Original Sports Capital Chart" style="max-width: 80%;">
+        <img src="ABC_graph.png" alt="Original Sports Capital Chart" style="max-width: 80%;">
         </div>
             <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
                 The replica chart:
@@ -124,23 +125,54 @@
         <figure id="Location7"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
         </div>
             <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
-                The improved chart:
+                The improved bar-chart shows all states clearly (all states labeled, not hidden). Grouped bars enable clear comparison, sorted by size and with meaningful colors distinguish occupied/unoccupied housing.
             </p>
         <figure id="Location8"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
         
     </section>   
 
+
     <section>
         <div class="chart-description">
-            <h2>Section 5: Fertility Rate Korea</h2>
-            <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
-                We've organised the page into sections, with each section containing a chart, title and a description. Here, we can describe the chart and give some context.
-                As a first example, we're using a basic chart from our repo.
+            <h2>Section 5: Death Rate</h2>
+            <p>
+                This chart displays the crude death rate (deaths per 1,000 people) for Chile, United Kingdom, and OECD members from 1960 to 2023, using live data from the World Bank Indicators API.
+            </p>
+        </div>
+        <figure id="Location9"></figure>
+            <p>
+                The base URL is: <code>https://api.worldbank.org/v2/country/{country}/indicator/{indicator}</code> <br>
+                In which we need to specify some required elements:<br>
+                1. Country codes (separated by semicolons for multiple countries):<br>
+                - CHL = Chile<br>
+                - GBR = United Kingdom<br>
+                - OED = OECD members<br>
+                2. Indicator code: SP.DYN.CDRT.IN = Death rate, crude (per 1,000 people)<br>
+                3. Query parameters:<br>
+                - format = json to specify JSON format for the response<br>
+                - per_page = 3000 to increase the number of results returned per page (default is 50)<br>
+                - date = 1960:2023 to filter data to specific date range<br>
+                4. Data Format Specification in Vega-Lite: <code>"format": {"property": "[1]"}</code> tells Vega-Lite to access the data array at index [1] of the JSON response, as the World Bank API returns metadata in [0] and actual data in [1].<br>
+                Using these elements, the final URL is:<br>
+                <code>https://api.worldbank.org/v2/country/CHL;GBR;OED/indicator/SP.DYN.CDRT.IN?format=json&per_page=3000&date=1960:2023</code>
             </p>
         </div>
         
         
     </section>   
+
+
+        <section>
+        <div class="chart-description">
+            <h2>Section 8: XX</h2>
+            <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
+                We've organised the page into sections, with each section containing a chart, title and a description. Here, we can describe the chart and give some context.
+                As a first example, we're using a basic chart from our repo.
+            </p>
+        <figure id="Location11"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
+        </div>
+
+    </section>  
     
     <!-- Do you want to add more sections? -->
         <!-- Try copying pasting the section above -->
@@ -162,9 +194,10 @@
         vegaEmbed('#Location4', "UK_unemployment_rate.json")
         vegaEmbed('#Location5', "UK_fertility.json")
         vegaEmbed('#Location6', "UK_life_expectancy.json")
-        vegaEmbed('#Location7', "FT_graph_replica.json")
-        vegaEmbed('#Location8', "FT_graph_improved.json")
-
+        vegaEmbed('#Location7', "ABC_replica.json")
+        vegaEmbed('#Location8', "ABC_improved.json")
+        vegaEmbed('#Location9', "Mortality_rate.json")
+        vegaEmbed('#Location11', "week8_milk_chart.json")
 
         console.log("0")
         console.log("1")

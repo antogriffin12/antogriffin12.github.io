@@ -1,53 +1,126 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": {
-        "text": "Sports capital",
-        "subtitle": "Annual revenue at largest Spanish clubs (€mn)"
-      },
-    "width": 600,
-    "height": 350,
-    "background": "#FFF1E0",
-    "data": {
-      "values": [
-        {"year": 2020, "club": "Atlético Madrid", "revenue": 331},
-        {"year": 2021, "club": "Atlético Madrid", "revenue": 333},
-        {"year": 2022, "club": "Atlético Madrid", "revenue": 393},
-        {"year": 2023, "club": "Atlético Madrid", "revenue": 362},
-        {"year": 2024, "club": "Atlético Madrid", "revenue": 416},
-        {"year": 2020, "club": "Real Madrid", "revenue": 714},
-        {"year": 2021, "club": "Real Madrid", "revenue": 640},
-        {"year": 2022, "club": "Real Madrid", "revenue": 732},
-        {"year": 2023, "club": "Real Madrid", "revenue": 843},
-        {"year": 2024, "club": "Real Madrid", "revenue": 1046},
-        {"year": 2020, "club": "Barcelona", "revenue": 715},
-        {"year": 2021, "club": "Barcelona", "revenue": 582},
-        {"year": 2022, "club": "Barcelona", "revenue": 638},
-        {"year": 2023, "club": "Barcelona", "revenue": 800},
-        {"year": 2024, "club": "Barcelona", "revenue": 760}
-      ]
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Sports capital",
+    "subtitle": "Annual revenue at largest Spanish clubs (€mn)",
+    "anchor": "start",
+    "fontSize": 18,
+    "font": "Arial, sans-serif",
+    "fontWeight": "bold",
+    "subtitleFontSize": 14,
+    "subtitleFont": "Arial, sans-serif",
+    "subtitleFontWeight": "normal",
+    "subtitlePadding": 5
+  },
+  "width": 600,
+  "height": 300,
+  "background": "#fff2e5",
+  "config": {
+    "axis": {
+      "grid": true,
+      "gridColor": "#eedfd3",
+      "gridOpacity": 0.5,
+      "domain": false,
+      "tickSize": 0,
+      "labelFont": "Arial, sans-serif",
+      "labelFontSize": 11,
+      "labelColor": "#898683"
     },
-    "mark": {"type": "line", "point": false, "strokeWidth": 2},
-    "encoding": {
-      "x": {
-        "field": "year",
-        "type": "ordinal",
-        "title": null,
-        "axis": {"labelAngle": 0}
+    "view": {
+      "stroke": null
+    }
+  },
+  "data": {
+    "values": [
+        {"year": 2020, "club": "Real Madrid", "revenue": 700},
+        {"year": 2021, "club": "Real Madrid", "revenue": 645},
+        {"year": 2022, "club": "Real Madrid", "revenue": 705},
+        {"year": 2023, "club": "Real Madrid", "revenue": 825},
+        {"year": 2024, "club": "Real Madrid", "revenue": 1050},
+
+        {"year": 2020, "club": "Barcelona", "revenue": 720},
+        {"year": 2021, "club": "Barcelona", "revenue": 585},
+        {"year": 2022, "club": "Barcelona", "revenue": 635},
+        {"year": 2023, "club": "Barcelona", "revenue": 795},
+        {"year": 2024, "club": "Barcelona", "revenue": 760},
+
+        {"year": 2020, "club": "Atlético Madrid", "revenue": 330},
+        {"year": 2021, "club": "Atlético Madrid", "revenue": 330},
+        {"year": 2022, "club": "Atlético Madrid", "revenue": 395},
+        {"year": 2023, "club": "Atlético Madrid", "revenue": 365},
+        {"year": 2024, "club": "Atlético Madrid", "revenue": 410}
+    ]
+  },
+  "mark": {
+    "type": "line",
+    "point": false,
+    "strokeWidth": 3,
+    "interpolate": "linear"
+  },
+  "encoding": {
+    "x": {
+      "field": "year",
+      "type": "quantitative",
+      "title": "Source: Deloitte",
+      "scale": {
+        "domain": [2020, 2024],
+        "nice": false
       },
-      "y": {
-        "field": "revenue",
-        "type": "quantitative",
-        "title": null,
-        "scale": {"domain": [300, 1000]}
+      "axis": {
+        "labelAngle": 0,
+        "labelPadding": 10,
+        "gridOpacity": 0,
+        "titleAlign": "left",
+        "titleAnchor": "start",
+        "titlePadding": 20,
+        "titleFont": "Arial, sans-serif",
+        "titleFontSize": 11,
+        "titleFontWeight": "normal",
+        "titleColor": "#898683",
+        "ticks": true,
+        "tickSize": 5,
+        "tickColor": "#eedfd3",
+        "tickOpacity": 0.5,
+        "domain":true,
+        "domainColor":"#eedfd3",
+        "domainOpacity": 0.5,
+        "format": "d",
+        "values": [2020, 2021, 2022, 2023, 2024]
+      }
+    },
+    "y": {
+      "field": "revenue",
+      "type": "quantitative",
+      "title": null,
+      "scale": {
+        "domain": [300, 1100]
       },
-      "color": {
-        "field": "club",
-        "type": "nominal",
-        "scale": {
-          "domain": ["Atlético Madrid", "Real Madrid", "Barcelona"],
-          "range": ["#1e3a5f", "#8b2e5a", "#5ab3c7"]
-        },
-        "legend": {"orient": "top", "title": null}
+      "axis": {
+        "tickCount": 6,
+        "labelPadding": 5,
+        "grid": true,
+        "values": [400, 600, 800, 1000],
+        "format": "d"
+      }
+    },
+    "color": {
+      "field": "club",
+      "type": "nominal",
+      "scale": {
+        "domain": ["Atlético Madrid", "Real Madrid", "Barcelona"],
+        "range": ["#145398", "#eb7290", "#99dfe8"]
+      },
+      "legend": {
+        "orient": "top",
+        "direction": "horizontal",
+        "title": null,
+        "labelFont": "Arial, sans-serif",
+        "labelFontSize": 13,
+        "symbolType": "stroke",
+        "symbolStrokeWidth": 3,
+        "symbolSize": 150,
+        "padding": 5
       }
     }
   }
+}

@@ -1,0 +1,78 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "description": "Crude death rate comparison for Chile, United Kingdom, and OECD members from World Bank API",
+  "data": {
+    "url": "https://api.worldbank.org/v2/country/CHL;GBR;OED/indicator/SP.DYN.CDRT.IN?format=json&per_page=3000&date=1960:2023",
+    "format": {"property": "[1]"}
+  },
+  
+  "view": {"stroke": "transparent"},
+  "width": 500,
+  "height": 250,
+  "title": {
+    "text": "Crude Death Rate",
+    "subtitle": "Chile, United Kingdom, and OECD members. Deaths per 1,000 people. Source: World Bank API",
+    "frame": "group",
+    "anchor": "start",
+    "subtitleFontSize": 10
+  },
+  "encoding": {
+    "x": {
+      "field": "date",
+      "type": "temporal",
+      "title": "",
+      "axis": {"grid": false}
+    },
+    "y": {
+      "field": "value",
+      "type": "quantitative",
+      "title": "Deaths per 1,000 people",
+      "axis": {
+        "titleAngle": 0,
+        "titleAlign": "left",
+        "titleX": 2,
+        "titleY": -10,
+        "titleOpacity": 0.6
+      }
+    },
+    "color": {
+      "field": "country.value",
+      "type": "nominal",
+      "legend": null,
+      "scale": {
+        "scheme": "category10"
+      }
+    }
+  },
+  "transform": [
+    {"filter": "datum.value"}
+  ],
+  "layer": [
+    {
+      "mark": {"type": "line", "strokeWidth": 2}
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 5,
+        "fontSize": 11
+      },
+      "encoding": {
+        "x": {
+          "field": "date",
+          "aggregate": "max"
+        },
+        "y": {
+          "field": "value",
+          "aggregate": {"argmax": "date"}
+        },
+        "text": {
+          "field": "country.value",
+          "type": "nominal",
+          "aggregate": {"argmax": "date"}
+        }
+      }
+    }
+  ]
+}
