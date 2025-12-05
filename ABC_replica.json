@@ -3,10 +3,10 @@
   "title": {
     "text": "How many empty homes are there in Australia?",
     "anchor": "start",
-    "fontSize": 20,
-    "font": "Helvetica, Arial, sans-serif",
+    "fontSize": 18,
+    "font": "Helvetica Neue",
     "fontWeight": "bold",
-    "offset": 20
+    "offset": 10
   },
   "width": 500,
   "height": 250,
@@ -22,11 +22,7 @@
   ],
   "layer": [
     {
-      "mark": {
-        "type": "line",
-        "strokeWidth": 2,
-        "point": false
-      },
+      "mark": {"type": "line", "strokeWidth": 2, "point": false},
       "encoding": {
         "x": {
           "field": "Housing type",
@@ -49,9 +45,7 @@
           "field": "Value",
           "type": "quantitative",
           "title": null,
-          "scale": {
-            "domain": [0, 9000000]
-          },
+          "scale": {"domain": [0, 9000000]},
           "axis": {
             "labelFontSize": 13,
             "labelColor": "#686868",
@@ -67,7 +61,10 @@
           "field": "Category",
           "type": "nominal",
           "scale": {
-            "domain": ["Occupied private dwellings", "Unoccupied private dwellings"],
+            "domain": [
+              "Occupied private dwellings",
+              "Unoccupied private dwellings"
+            ],
             "range": ["#c8d86f", "#455fa4"]
           },
           "legend": null
@@ -77,7 +74,11 @@
     {
       "data": {
         "values": [
-          {"Housing type": "Total", "Category": "Occupied private dwellings", "Value": 9300000}
+          {
+            "Housing type": "Total",
+            "Category": "Occupied private dwellings",
+            "Value": 9300000
+          }
         ]
       },
       "mark": {
@@ -85,20 +86,29 @@
         "align": "left",
         "dx": 15,
         "dy": -20,
-        "fontSize": 14,
-        "font": "Helvetica, Arial, sans-serif",
+        "fontSize": 13,
+        "fontWeight": "bold",
+        "font": "Helvetica Neue",
         "color": "#798921"
       },
       "encoding": {
         "x": {"field": "Housing type", "type": "nominal", "sort": null},
-        "y": {"field": "Value", "type": "quantitative", "scale": {"domain": [0, 9000000]}},
+        "y": {
+          "field": "Value",
+          "type": "quantitative",
+          "scale": {"domain": [0, 9000000]}
+        },
         "text": {"value": "Occupied"}
       }
     },
     {
       "data": {
         "values": [
-          {"Housing type": "Total", "Category": "Occupied private dwellings", "Value": 9300000}
+          {
+            "Housing type": "Total",
+            "Category": "Occupied private dwellings",
+            "Value": 9300000
+          }
         ]
       },
       "mark": {
@@ -106,20 +116,29 @@
         "align": "left",
         "dx": 15,
         "dy": -5,
-        "fontSize": 14,
-        "font": "Helvetica, Arial, sans-serif",
+        "fontSize": 13,
+        "font": "Helvetica Neue",
+        "fontWeight": "bold",
         "color": "#798921"
       },
       "encoding": {
         "x": {"field": "Housing type", "type": "nominal", "sort": null},
-        "y": {"field": "Value", "type": "quantitative", "scale": {"domain": [0, 9000000]}},
+        "y": {
+          "field": "Value",
+          "type": "quantitative",
+          "scale": {"domain": [0, 9000000]}
+        },
         "text": {"value": "private"}
       }
     },
     {
       "data": {
         "values": [
-          {"Housing type": "Total", "Category": "Occupied private dwellings", "Value": 9300000}
+          {
+            "Housing type": "Total",
+            "Category": "Occupied private dwellings",
+            "Value": 9300000
+          }
         ]
       },
       "mark": {
@@ -127,76 +146,108 @@
         "align": "left",
         "dx": 15,
         "dy": 10,
-        "fontSize": 14,
-        "font": "Helvetica, Arial, sans-serif",
+        "fontSize": 13,
+        "font": "Helvetica Neue",
+        "fontWeight": "bold",
         "color": "#798921"
       },
       "encoding": {
         "x": {"field": "Housing type", "type": "nominal", "sort": null},
-        "y": {"field": "Value", "type": "quantitative", "scale": {"domain": [0, 9000000]}},
+        "y": {
+          "field": "Value",
+          "type": "quantitative",
+          "scale": {"domain": [0, 9000000]}
+        },
         "text": {"value": "dwellings"}
       }
     },
     {
       "data": {
         "values": [
-          {"Housing type": "Total", "Category": "Unoccupied private dwellings", "Value": 1100000}
+          {
+            "Housing type": "Total",
+            "Category": "Unoccupied private dwellings",
+            "Value": 1100000
+          }
         ]
       },
       "mark": {
         "type": "text",
         "align": "left",
         "dx": 15,
-        "dy": -20,
-        "fontSize": 14,
-        "font": "Helvetica, Arial, sans-serif",
+        "dy": -10,
+        "fontSize": 13,
+        "font": "Helvetica Neue",
+        "fontWeight": "bold",
         "color": "#455fa4"
       },
       "encoding": {
         "x": {"field": "Housing type", "type": "nominal", "sort": null},
-        "y": {"field": "Value", "type": "quantitative", "scale": {"domain": [0, 9000000]}},
+        "y": {
+          "field": "Value",
+          "type": "quantitative",
+          "scale": {"domain": [0, 9000000]}
+        },
         "text": {"value": "Unoccupied"}
       }
     },
     {
       "data": {
         "values": [
-          {"Housing type": "Total", "Category": "Unoccupied private dwellings", "Value": 1100000}
+          {
+            "Housing type": "Total",
+            "Category": "Unoccupied private dwellings",
+            "Value": 1100000
+          }
         ]
       },
       "mark": {
         "type": "text",
         "align": "left",
         "dx": 15,
-        "dy": -5,
-        "fontSize": 14,
-        "font": "Helvetica, Arial, sans-serif",
+        "dy": 5,
+        "fontSize": 13,
+        "font": "Helvetica Neue",
+        "fontWeight": "bold",
         "color": "#455fa4"
       },
       "encoding": {
         "x": {"field": "Housing type", "type": "nominal", "sort": null},
-        "y": {"field": "Value", "type": "quantitative", "scale": {"domain": [0, 9000000]}},
+        "y": {
+          "field": "Value",
+          "type": "quantitative",
+          "scale": {"domain": [0, 9000000]}
+        },
         "text": {"value": "private"}
       }
     },
     {
       "data": {
         "values": [
-          {"Housing type": "Total", "Category": "Unoccupied private dwellings", "Value": 1100000}
+          {
+            "Housing type": "Total",
+            "Category": "Unoccupied private dwellings",
+            "Value": 1100000
+          }
         ]
       },
       "mark": {
         "type": "text",
         "align": "left",
         "dx": 15,
-        "dy": 10,
-        "fontSize": 14,
-        "font": "Helvetica, Arial, sans-serif",
+        "dy": 20,
+        "fontSize": 13,
+        "font": "Helvetica Neue",
+        "fontWeight": "bold",
         "color": "#455fa4"
       },
       "encoding": {
         "x": {"field": "Housing type", "type": "nominal", "sort": null},
-        "y": {"field": "Value", "type": "quantitative", "scale": {"domain": [0, 9000000]}},
+        "y": {
+          "field": "Value",
+          "type": "quantitative",
+          "scale": {"domain": [0, 9000000]}
+        },
         "text": {"value": "dwellings"}
       }
     },
@@ -208,25 +259,23 @@
         "x": 0,
         "y": 450,
         "dy": -140,
-        "fontSize": 14,
-        "font": "Helvetica, Arial, sans-serif",
+        "fontSize": 12,
+        "font": "Helvetica Neue",
         "fontStyle": "italic",
-        "color": "#888"
+        "color": "#888888"
       },
-      "encoding": {
-        "text": {"value": "Source:"}
-      }
+      "encoding": {"text": {"value": "Source:"}}
     },
     {
       "data": {"values": [{}]},
       "mark": {
         "type": "text",
         "align": "left",
-        "x": 53,
+        "x": 45,
         "y": 450,
         "dy": -140,
-        "fontSize": 14,
-        "font": "Helvetica, Arial, sans-serif",
+        "fontSize": 12,
+        "font": "Helvetica Neue",
         "color": "#4169E1"
       },
       "encoding": {
@@ -234,7 +283,5 @@
       }
     }
   ],
-  "config": {
-    "view": {"stroke": null}
-  }
+  "config": {"view": {"stroke": null}}
 }

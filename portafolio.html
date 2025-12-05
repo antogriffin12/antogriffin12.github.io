@@ -113,7 +113,7 @@
         <div class="chart-description">
             <h2>Section 4: Replication. Re-create, then improve, someone else's chart.</h2>
             <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
-                I chose a ABC News graph: <code>(https://web.archive.org/web/20241007071210/https://www.abc.net.au/news/2024-10-07/about-13-million-spare-bedrooms-in-australia-housing-crisis/104439670) </code>.
+                I chose a ABC News graph: <a href= "https://web.archive.org/web/20241007071210/https://www.abc.net.au/news/2024-10-07/about-13-million-spare-bedrooms-in-australia-housing-crisis/104439670" target="_blank">ABC - Housing crisis chart</a>
             <p>   
                 An image of it is:
             </p>
@@ -156,8 +156,33 @@
                 Using these elements, the final URL is:<br>
                 <code>https://api.worldbank.org/v2/country/CHL;GBR;OED/indicator/SP.DYN.CDRT.IN?format=json&per_page=3000&date=1960:2023</code>
             </p>
+            
+        <div class="chart-description">
+            <p>
+                Now this second chart displays population data for Chile's 16 regions using data scraped from Wikipedia with Python and BeautifulSoup.
+            </p>
         </div>
-        
+        <figure id="Location10"></figure>    
+    
+            <p>
+                Source:<a href="https://es.wikipedia.org/wiki/Regiones_de_Chile" target="_blank">Wikipedia - Regions of Chile</a>
+            </p>
+    
+            <p>
+                Google Colab Notebook: <a href="https://colab.research.google.com/drive/1jvYDPlegiFytBB397CyBLYL44qWp0Hk8?usp=sharing" target="_blank">View the scraping code</a> <br>
+                The scraper:<br>
+    
+                1. Downloads the Wikipedia page containing Chile's regional data<br>
+                2. Uses BeautifulSoup to identify and extract the wikitable containing region information<br>
+                3. Removes citations, spaces, and formats numbers correctly (Chilean format uses spaces as thousands separators)<br>
+                4. Converts data to TIDY/long format suitable for Vega-Lite visualization<br>
+                5. Saves cleaned data as JSON for direct use in charts
+            </p>
+
+            <p>
+                The main challenge was that Wikipedia table headers contained citation markers (e.g., "Población(2024) [8]") that were removed during text cleaning, requiring dynamic column name matching. Additionally, Chilean number formatting uses spaces as thousands separators (e.g., "244 569") which required special handling in the data cleaning function.<br>
+                The final dataset includes: region name, population (2024), area in km², population density (calculated), and capital city. Data is stored in TIDY format with each row representing one region and its associated attributes.
+            </p>
         
     </section>   
 
@@ -188,16 +213,17 @@
         let figure_2_spec = "https://raw.githubusercontent.com/RDeconomist/RDeconomist.github.io/refs/heads/main/charts/ONSinflation/chartINF10.json"                                                                                                      // You should have a spec for a graph in this same folder. Just specify its name here, e.g. let figure_1_spec = "chart1.json"
 
 
-        vegaEmbed('#Location1', figure_1_spec) // We're using the vegaEmbed function to put a graph in the element with id figure_1
-        vegaEmbed('#Location2', figure_2_spec)
-        vegaEmbed('#Location3', "Japan.json")
-        vegaEmbed('#Location4', "UK_unemployment_rate.json")
-        vegaEmbed('#Location5', "UK_fertility.json")
-        vegaEmbed('#Location6', "UK_life_expectancy.json")
-        vegaEmbed('#Location7', "ABC_replica.json")
-        vegaEmbed('#Location8', "ABC_improved.json")
-        vegaEmbed('#Location9', "Mortality_rate.json")
-        vegaEmbed('#Location11', "week8_milk_chart.json")
+        vegaEmbed('#Location1', figure_1_spec, {"renderer": "svg"}) // We're using the vegaEmbed function to put a graph in the element with id figure_1
+        vegaEmbed('#Location2', figure_2_spec, {"renderer": "svg"})
+        vegaEmbed('#Location3', "Japan.json", {"renderer": "svg"})
+        vegaEmbed('#Location4', "UK_unemployment_rate.json", {"renderer": "svg"})
+        vegaEmbed('#Location5', "UK_fertility.json", {"renderer": "svg"})
+        vegaEmbed('#Location6', "UK_life_expectancy.json", {"renderer": "svg"})
+        vegaEmbed('#Location7', "ABC_replica.json", {"renderer": "svg"})
+        vegaEmbed('#Location8', "ABC_improved.json", {"renderer": "svg"})
+        vegaEmbed('#Location9', "Mortality_rate.json", {"renderer": "svg"})
+        vegaEmbed('#Location10', "Chile_regions_chart.json", {"renderer": "svg"})
+        vegaEmbed('#Location11', "week8_milk_chart.json", {"renderer": "svg"})
 
         console.log("0")
         console.log("1")

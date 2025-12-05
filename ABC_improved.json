@@ -5,10 +5,10 @@
     "subtitle": "Private dwellings by state/territory (millions)",
     "anchor": "start",
     "fontSize": 22,
-    "font": "Arial, sans-serif",
+    "font": "Helvetica Neue",
     "fontWeight": "bold",
     "subtitleFontSize": 14,
-    "subtitleFont": "Arial, sans-serif",
+    "subtitleFont": "Helvetica Neue",
     "subtitlePadding": 5
   },
   "width": 500,
