@@ -10,7 +10,7 @@
     "subtitleColor": "#666666"
   },
   "width": 500,
-  "height": 300,
+  "height": 250,
   "background": "#ffffff",
   "data": {
     "url": "data/life-expectancy.csv",
