@@ -141,7 +141,7 @@
         </div>
         <figure id="Location9"></figure>
             <p>
-                The base URL is: <code>https://api.worldbank.org/v2/country/{country}/indicator/{indicator}</code> <br>
+                The base URL is: https://api.worldbank.org/v2/country/{country}/indicator/{indicator} <br>
                 In which we need to specify some required elements:<br>
                 1. Country codes (separated by semicolons for multiple countries):<br>
                 - CHL = Chile<br>
@@ -152,9 +152,9 @@
                 - format = json to specify JSON format for the response<br>
                 - per_page = 3000 to increase the number of results returned per page (default is 50)<br>
                 - date = 1960:2023 to filter data to specific date range<br>
-                4. Data Format Specification in Vega-Lite: <code>"format": {"property": "[1]"}</code> tells Vega-Lite to access the data array at index [1] of the JSON response, as the World Bank API returns metadata in [0] and actual data in [1].<br>
+                4. Data Format Specification in Vega-Lite: "format": {"property": "[1]"} tells Vega-Lite to access the data array at index [1] of the JSON response, as the World Bank API returns metadata in [0] and actual data in [1].<br>
                 Using these elements, the final URL is:<br>
-                <code>https://api.worldbank.org/v2/country/CHL;GBR;OED/indicator/SP.DYN.CDRT.IN?format=json&per_page=3000&date=1960:2023</code>
+                https://api.worldbank.org/v2/country/CHL;GBR;OED/indicator/SP.DYN.CDRT.IN?format=json&per_page=3000&date=1960:2023
             </p>
             
         <div class="chart-description">
@@ -187,25 +187,72 @@
     </section>   
 
 
-     <section>
+    <section>
         <div class="chart-description">
-            <h2>Section 5: Loops. Build a dashboard.</h2>
+            <h2>Section 6: Loops. Build a dashboard.</h2>
             <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
                 The link to my Loops Collab is: <a href= "https://colab.research.google.com/drive/13BMYnQFlWt-YUtnQb-TlV2dGrNgDKtK_?usp=sharing" target="_blank">Collab Loops Link</a>
-            <p>   
-                An image of it is:
             </p>
-        <img src="ABC_graph.png" alt="Original Sports Capital Chart" style="max-width: 80%;">
         </div>
-            <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
-                The replica chart:
-            </p>
-        <figure id="Location7"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
+        <div class="chart-grid">
+            <div id="chart0"></div>
+            <div id="chart1"></div>
+            <div id="chart2"></div>
+            <div id="chart3"></div>
+            <div id="chart4"></div>
+            <div id="chart5"></div>
         </div>
-            <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
-                The improved bar-chart shows all states clearly (all states labeled, not hidden). Grouped bars enable clear comparison, sorted by size and with meaningful colors distinguish occupied/unoccupied housing.
-            </p>
-        <figure id="Location8"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
+
+        <script type="text/javascript">
+        const countries = [
+            {code: 'GBR', name: 'United Kingdom'},
+            {code: 'USA', name: 'United States'},
+            {code: 'JPN', name: 'Japan'},
+            {code: 'DEU', name: 'Germany'},
+            {code: 'CHL', name: 'Chile'},
+            {code: 'CHN', name: 'China'}
+        ];  
+        let baseSpec = {
+            "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+            "title": {
+                "text": "",
+                "subtitle": "Source: World Bank (via Python API)",
+                "anchor": "start"
+            },
+            "width": 280,
+            "height": 200,
+            "data": {"url": ""},
+            "mark": {"type": "line", "color": "#58b3c7", "point": false},
+            "encoding": {
+                "x": {  
+                    "field": "year",
+                    "type": "quantitative", 
+                    "title": "",
+                    "axis": {"grid": false,
+                    "format": "d"
+                    }
+                },
+                "y": {
+                    "field": "lifeExpectancy",
+                    "type": "quantitative",
+                    "title": "Life Expectancy (years)",
+                    "axis": {"grid": false}
+                },
+                "tooltip": [
+                    {"field": "country", "type": "nominal", "title": "Country"},
+                    {"field": "year", "type": "ordinal", "title": "Year"},
+                    {"field": "lifeExpectancy", "type": "quantitative", "title": "Life Expectancy", "format": ".2f"}
+                ]
+            }
+        };
+
+        countries.forEach((country, i) => {
+            let spec = JSON.parse(JSON.stringify(baseSpec));
+            spec.data.url = `https://raw.githubusercontent.com/antogriffin12/antogriffin12.github.io/refs/heads/main/life_expectancy_${country.code}.json`;
+            spec.title.text = `Life Expectancy: ${country.name}`;
+            vegaEmbed(`#chart${i}`, spec);
+        });
+        </script>
         
     </section>   
 
