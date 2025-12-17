@@ -1,4 +1,4 @@
-name,city,lat,lon,beds
+﻿name,city,lat,lon,beds
 Aberdeen Royal Infirmary,Aberdeen,57.1667,-2.1333,900
 Ninewells Hospital,Dundee,56.4568,-3.0044,950
 Royal Infirmary of Edinburgh,Edinburgh,55.9216,-3.1368,900
@@ -19,4 +19,3 @@ Forth Valley Royal Hospital,Larbert,56.0192,-3.8428,860
 Dr Gray's Hospital,Elgin,57.6572,-3.3069,298
 Caithness General Hospital,Wick,58.4419,-3.0878,48
 Gilbert Bain Hospital,Lerwick,60.1547,-1.1419,46
-
