@@ -1,15 +1,21 @@
-﻿"name,city,lat,lon,beds"
-"Aberdeen Royal Infirmary,Aberdeen,57.1667,-2.1333,900"
-"Ninewells Hospital,Dundee,56.4568,-3.0044,950"
-"Royal Infirmary of Edinburgh,Edinburgh,55.9216,-3.1368,900"
-"Queen Elizabeth University Hospital,Glasgow,55.8662,-4.3419,1677"
-"Raigmore Hospital,Inverness,57.4656,-4.2139,377"
-"Victoria Hospital,Kirkcaldy,56.1317,-3.1626,430"
-"Perth Royal Infirmary,Perth,56.3939,-3.4364,346"
-"University Hospital Crosshouse,Kilmarnock,55.5875,-4.5127,470"
-"Vale of Leven Hospital,Alexandria,56.0083,-4.5833,333"
-"Dumfries and Galloway Royal Infirmary,Dumfries,55.0563,-3.5889,377"
-"University Hospital Wishaw,Wishaw,55.7753,-3.9239,397"
-"University Hospital Monklands,Airdrie,55.8633,-3.9669,523"
-"University Hospital Hairmyres,East Kilbride,55.7544,-4.1969,504"
-"Borders General Hospital,Melrose,55.5731,-2.7181,197"
+name,city,lat,lon,beds
+Aberdeen Royal Infirmary,Aberdeen,57.1667,-2.1333,900
+Ninewells Hospital,Dundee,56.4568,-3.0044,950
+Royal Infirmary of Edinburgh,Edinburgh,55.9216,-3.1368,900
+Queen Elizabeth University Hospital,Glasgow,55.8662,-4.3419,1677
+Raigmore Hospital,Inverness,57.4656,-4.2139,377
+Victoria Hospital,Kirkcaldy,56.1317,-3.1626,430
+Perth Royal Infirmary,Perth,56.3939,-3.4364,346
+University Hospital Crosshouse,Kilmarnock,55.5875,-4.5127,470
+Vale of Leven Hospital,Alexandria,56.0083,-4.5833,333
+Dumfries and Galloway Royal Infirmary,Dumfries,55.0563,-3.5889,377
+University Hospital Wishaw,Wishaw,55.7753,-3.9239,397
+University Hospital Monklands,Airdrie,55.8633,-3.9669,523
+University Hospital Hairmyres,East Kilbride,55.7544,-4.1969,504
+Borders General Hospital,Melrose,55.5731,-2.7181,197
+Western General Hospital,Edinburgh,55.9636,-3.2397,600
+Royal Alexandra Hospital,Paisley,55.8462,-4.4326,494
+Forth Valley Royal Hospital,Larbert,56.0192,-3.8428,860
+Dr Gray's Hospital,Elgin,57.6572,-3.3069,298
+Caithness General Hospital,Wick,58.4419,-3.0878,48
+Gilbert Bain Hospital,Lerwick,60.1547,-1.1419,46
