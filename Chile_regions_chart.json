@@ -5,7 +5,7 @@
     "url": "https://raw.githubusercontent.com/antogriffin12/antogriffin12.github.io/refs/heads/main/chile_regions_population%20(1).json"
   },
   "width": 500,
-  "height": 400,
+  "height": 350,
   "title": {
     "text": "Population by Region in Chile",
     "subtitle": "2024 Census Data. Source: Wikipedia (scraped with BeautifulSoup)",

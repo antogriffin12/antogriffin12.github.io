@@ -109,7 +109,7 @@
     </section>
   
 
-     <section>
+    <section>
         <div class="chart-description">
             <h2>Section 4: Replication. Re-create, then improve, someone else's chart.</h2>
             <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
@@ -250,7 +250,7 @@
             let spec = JSON.parse(JSON.stringify(baseSpec));
             spec.data.url = `https://raw.githubusercontent.com/antogriffin12/antogriffin12.github.io/refs/heads/main/life_expectancy_${country.code}.json`;
             spec.title.text = `Life Expectancy: ${country.name}`;
-            vegaEmbed(`#chart${i}`, spec);
+            vegaEmbed(`#chart${i}`, spec, {"renderer": "svg"});
         });
         </script>
         
@@ -258,15 +258,37 @@
 
 
 
-
-        <section>
+    <section>
         <div class="chart-description">
-            <h2>Section 8: XX</h2>
+            <h2>Section 7: Maps: Base maps and choropleths.</h2>
             <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
-                We've organised the page into sections, with each section containing a chart, title and a description. Here, we can describe the chart and give some context.
-                As a first example, we're using a basic chart from our repo.
+                I chose to make a choropleth map of Wales showing an estimation of the average household income in 2023 at the Middle Layer Super Output Area (MSOA) level. The data was produced by the Office for National Statistics (ONS) using small area income estimates based on the Family Resources Survey. The link to the data source: <a href= "https://www.ons.gov.uk/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/bulletins/smallareamodelbasedincomeestimates/financialyearending2023" target="_blank">Data Source ONS</a>
+              
             </p>
-        <figure id="Location11"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
+
+        <figure id="Location12"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
+        <div>
+            <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
+                I also created a coordinate map of Scotland showing the location of all schools, differentiated by school type (Primary, Secondary, and Special) and sized by pupil enrollment. The data was created by the Scottish Government and was last updated on 27 February 2025. The link to the data source: <a href= "https://www.data.gov.uk/dataset/9a6f9d86-9698-4a5d-a2c8-89f3b212c52c/scottish-school-roll-and-locations" target="_blank">Data Source Scottish Government</a>
+            </p>
+        <figure id="Location13"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
+        </div>
+    </section>   
+
+
+    <section>
+        <div class="chart-description">
+            <h2>Section 8: Big Data Analysis: UK Supermarket Prices</h2>
+            <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
+                Using the AutoCPI dataset of UK supermarket prices, I classified products into essential (milk, bread, eggs, rice, pasta) and non-essential (chocolate, crisps, sweets, ice cream) categories. I then aggregated daily prices by category to create a time-series comparison and analyzed the last 30 days' price distribution. The link to the Collab Notebook: <a href= "https://colab.research.google.com/drive/1-aZeQGgZAF33CAxPNJnaGYG9YJ4ORQWZ?usp=sharing" target="_blank">Collab code</a>  <br>
+                The first chart shows price evolution over time, revealing that non-essential products 
+                consistently cost more.
+            </p>
+        <iframe src="chart1_bigdata.html" width="100%" height="400" frameborder="0"></iframe>
+            <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
+                The second chart displays the price distribution using box plots for the last 30 days of data, showing that non-essential products have higher median prices and greater price variability.
+            </p>
+        <iframe src="chart2_bigdata.html" width="100%" height="600" frameborder="0"></iframe>
         </div>
 
     </section>  
@@ -296,6 +318,8 @@
         vegaEmbed('#Location9', "Mortality_rate.json", {"renderer": "svg"})
         vegaEmbed('#Location10', "Chile_regions_chart.json", {"renderer": "svg"})
         vegaEmbed('#Location11', "week8_milk_chart.json", {"renderer": "svg"})
+        vegaEmbed('#Location12', "Wales_chart.json", {"renderer": "svg"})
+        vegaEmbed('#Location13', "Scotland_schools.json", {"renderer": "svg"})
 
         console.log("0")
         console.log("1")
