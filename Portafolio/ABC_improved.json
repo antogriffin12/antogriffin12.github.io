@@ -15,24 +15,17 @@
   "height": 250,
   "background": "white",
   "data": {
-    "url": "https://raw.githubusercontent.com/antogriffin12/antogriffin12.github.io/refs/heads/main/ABC_data.csv"
+    "url": "https://raw.githubusercontent.com/antogriffin12/antogriffin12.github.io/refs/heads/main/Portafolio/ABC_data.csv"
   },
   "transform": [
-    {
-      "filter": "datum['Housing type'] != 'Total'"
-    },
+    {"filter": "datum['Housing type'] != 'Total'"},
     {
       "fold": ["Occupied private dwellings", "Unoccupied private dwellings"],
       "as": ["Category", "Value"]
     },
-    {
-      "calculate": "datum.Value / 1000000",
-      "as": "Value_Millions"
-    }
+    {"calculate": "datum.Value / 1000000", "as": "Value_Millions"}
   ],
-  "mark": {
-    "type": "bar"
-  },
+  "mark": {"type": "bar"},
   "encoding": {
     "x": {
       "field": "Housing type",
@@ -64,7 +57,10 @@
       "field": "Category",
       "type": "nominal",
       "scale": {
-        "domain": ["Occupied private dwellings", "Unoccupied private dwellings"],
+        "domain": [
+          "Occupied private dwellings",
+          "Unoccupied private dwellings"
+        ],
         "range": ["#2E7D32", "#D32F2F"]
       },
       "legend": {
@@ -75,15 +71,10 @@
         "symbolSize": 200
       }
     },
-    "xOffset": {
-      "field": "Category"
-    }
+    "xOffset": {"field": "Category"}
   },
   "config": {
     "view": {"stroke": null},
-    "axis": {
-      "labelColor": "#333",
-      "titleColor": "#333"
-    }
+    "axis": {"labelColor": "#333", "titleColor": "#333"}
   }
 }

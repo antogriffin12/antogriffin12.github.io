@@ -2,7 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "description": "Population by region in Chile (2024) - Data scraped from Wikipedia",
   "data": {
-    "url": "https://raw.githubusercontent.com/antogriffin12/antogriffin12.github.io/refs/heads/main/chile_regions_population%20(1).json"
+    "url": "https://raw.githubusercontent.com/antogriffin12/antogriffin12.github.io/refs/heads/main/Portafolio/chile_regions_population%20(1).json"
   },
   "width": 500,
   "height": 350,
@@ -13,34 +13,41 @@
     "subtitleFontSize": 11,
     "anchor": "start"
   },
-  "mark": {
-    "type": "bar",
-    "color": "#d52b1e"
-  },
+  "mark": {"type": "bar", "color": "#d52b1e"},
   "encoding": {
     "y": {
       "field": "region",
       "type": "nominal",
       "title": "",
       "sort": "-x",
-      "axis": {
-        "labelLimit": 250
-      }
+      "axis": {"labelLimit": 250}
     },
     "x": {
       "field": "population",
       "type": "quantitative",
       "title": "Population",
-      "axis": {
-        "format": ",.0f",
-        "grid": false
-      }
+      "axis": {"format": ",.0f", "grid": false}
     },
     "tooltip": [
       {"field": "region", "type": "nominal", "title": "Region"},
-      {"field": "population", "type": "quantitative", "title": "Population", "format": ","},
-      {"field": "area_km2", "type": "quantitative", "title": "Area (km²)", "format": ",.2f"},
-      {"field": "density", "type": "quantitative", "title": "Density (hab/km²)", "format": ".2f"}
+      {
+        "field": "population",
+        "type": "quantitative",
+        "title": "Population",
+        "format": ","
+      },
+      {
+        "field": "area_km2",
+        "type": "quantitative",
+        "title": "Area (km²)",
+        "format": ",.2f"
+      },
+      {
+        "field": "density",
+        "type": "quantitative",
+        "title": "Density (hab/km²)",
+        "format": ".2f"
+      }
     ]
   }
 }

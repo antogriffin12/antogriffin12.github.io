@@ -17,7 +17,7 @@
       "lookup": "properties.MSOA21CD",
       "from": {
         "data": {
-          "url": "https://raw.githubusercontent.com/antogriffin12/antogriffin12.github.io/refs/heads/main/AvergaeHouseholdIncome.csv"
+          "url": "https://raw.githubusercontent.com/antogriffin12/antogriffin12.github.io/refs/heads/main/Portafolio/AvergaeHouseholdIncome.csv"
         },
         "key": "geo_id",
         "fields": ["value"]

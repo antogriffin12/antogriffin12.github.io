@@ -11,7 +11,7 @@
   "height": 600,
 
   "data": {
-    "url": "https://raw.githubusercontent.com/antogriffin12/antogriffin12.github.io/main/chile_mortality_rates_2002_2022.csv"
+    "url": "https://raw.githubusercontent.com/antogriffin12/antogriffin12.github.io/main/Portafolio/chile_mortality_rates_2002_2022.csv"
   },
 
   "params": [
@@ -36,7 +36,7 @@
       "lookup": "region_clean",
       "from": {
         "data": {
-          "url": "https://raw.githubusercontent.com/antogriffin12/antogriffin12.github.io/main/chilemap.json",
+          "url": "https://raw.githubusercontent.com/antogriffin12/antogriffin12.github.io/main/Portafolio/chilemap.json",
           "format": {
             "type": "json",
             "property": "features"
