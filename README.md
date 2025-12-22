@@ -1,5 +1,5 @@
 # antogriffin12.github.io
-LSE
+
 # Data Visualisation Portfolio - MPP 2025
 
 Welcome to my portfolio for the **Automated Data Visualisation for Policymaking (PP434)** course, completed as part of my Master of Public Policy at the London School of Economics in 2025.
