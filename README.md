@@ -21,6 +21,6 @@ Contains the weekly assignments and visualisation tasks completed throughout the
 ### 2. Project
 Contains my final course project: **"Mapping Mortality in Chile: Visualising Regional Health Inequalities"**
 
-This project analyzes mortality patterns across Chilean regions (2002-2022) using individual death records from DEIS and population data from INE. It features interactive visualisations exploring temporal trends and regional disparities in causes of death.
+This project analyses mortality patterns across Chilean regions (2002-2022) using individual death records from DEIS and population data from INE. It features interactive visualisations exploring temporal trends and regional disparities in causes of death.
 
 **View the project:** [Project Page](https://antogriffin12.github.io/Project/project.html)
