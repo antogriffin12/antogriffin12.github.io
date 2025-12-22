@@ -6,7 +6,7 @@ Welcome to my portfolio for the **Automated Data Visualisation for Policymaking 
 
 ## Repository Structure
 
-This repository is organized into two main folders:
+This repository is organised into two main folders:
 
 ### 1. Portfolio
 Contains the weekly assignments and visualisation tasks completed throughout the course, including:
