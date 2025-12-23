@@ -1,0 +1,74 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Mortality by Cause of Death",
+    "subtitle": "Select region to explore trends",
+    "anchor": "start"
+  },
+  "width": 700,
+  "height": 400,
+  "data": {
+    "url": "https://raw.githubusercontent.com/antogriffin12/antogriffin12.github.io/main/Portafolio/chile_mortality_by_cause_2002_2022.csv"
+  },
+  "params": [
+    {
+      "name": "region_select",
+      "value": "Región Metropolitana de Santiago",
+      "bind": {
+        "input": "select",
+        "options": [
+          "Arica y Parinacota",
+          "Tarapacá",
+          "Antofagasta",
+          "Atacama",
+          "Coquimbo",
+          "Valparaíso",
+          "Región Metropolitana de Santiago",
+          "Libertador General Bernardo O'Higgins",
+          "Maule",
+          "Ñuble",
+          "Bío-Bío",
+          "La Araucanía",
+          "Los Ríos",
+          "Los Lagos",
+          "Aisén del General Carlos Ibáñez del Campo",
+          "Magallanes y de la Antártica Chilena"
+        ],
+        "name": "Select Region: "
+      }
+    }
+  ],
+  "transform": [
+    {"filter": "datum.region_clean == region_select"}
+  ],
+  "mark": {
+    "type": "line",
+    "strokeWidth": 2,
+    "point": true
+  },
+  "encoding": {
+    "x": {
+      "field": "year",
+      "type": "quantitative",
+      "title": "Year",
+      "axis": {"format": "d"}
+    },
+    "y": {
+      "field": "defunciones",
+      "type": "quantitative",
+      "title": "Number of Deaths"
+    },
+    "color": {
+      "field": "causa_nombre",
+      "type": "nominal",
+      "title": "Cause of Death",
+      "scale": {"scheme": "tableau20"},
+      "legend": {"labelLimit": 200}
+    },
+    "tooltip": [
+      {"field": "year", "type": "quantitative", "title": "Year"},
+      {"field": "causa_nombre", "type": "nominal", "title": "Cause"},
+      {"field": "defunciones", "type": "quantitative", "title": "Deaths", "format": ","}
+    ]
+  }
+}

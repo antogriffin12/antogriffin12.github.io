@@ -1,0 +1,114 @@
+[
+  {
+    "region": "Región de Arica y Parinacota",
+    "population": 244569,
+    "area_km2": 16873.3,
+    "density": 14.49,
+    "capital": "Arica"
+  },
+  {
+    "region": "Región de Tarapacá",
+    "population": 369806,
+    "area_km2": 42225.8,
+    "density": 8.76,
+    "capital": "Iquique"
+  },
+  {
+    "region": "Región de Antofagasta",
+    "population": 635416,
+    "area_km2": 126049.1,
+    "density": 5.04,
+    "capital": "Antofagasta"
+  },
+  {
+    "region": "Región de Atacama",
+    "population": 299180,
+    "area_km2": 75176.2,
+    "density": 3.98,
+    "capital": "Copiapó"
+  },
+  {
+    "region": "Región de Coquimbo",
+    "population": 832864,
+    "area_km2": 40579.9,
+    "density": 20.52,
+    "capital": "La Serena"
+  },
+  {
+    "region": "Región de Valparaíso",
+    "population": 1896053,
+    "area_km2": 16396.1,
+    "density": 115.64,
+    "capital": "Valparaíso"
+  },
+  {
+    "region": "Región Metropolitana de Santiago",
+    "population": 7400741,
+    "area_km2": 15403.2,
+    "density": 480.47,
+    "capital": "Santiago"
+  },
+  {
+    "region": "Región del Libertador General Bernardo O'Higgins",
+    "population": 987228,
+    "area_km2": 16387.0,
+    "density": 60.24,
+    "capital": "Rancagua"
+  },
+  {
+    "region": "Región del Maule",
+    "population": 1123008,
+    "area_km2": 30296.1,
+    "density": 37.07,
+    "capital": "Talca"
+  },
+  {
+    "region": "Región de Ñuble",
+    "population": 512289,
+    "area_km2": 13178.5,
+    "density": 38.87,
+    "capital": "Chillán"
+  },
+  {
+    "region": "Región del Biobío",
+    "population": 1613059,
+    "area_km2": 23890.2,
+    "density": 67.52,
+    "capital": "Concepción"
+  },
+  {
+    "region": "Región de La Araucanía",
+    "population": 1010423,
+    "area_km2": 31842.3,
+    "density": 31.73,
+    "capital": "Temuco"
+  },
+  {
+    "region": "Región de Los Ríos",
+    "population": 398230,
+    "area_km2": 18429.5,
+    "density": 21.61,
+    "capital": "Valdivia"
+  },
+  {
+    "region": "Región de Los Lagos",
+    "population": 890284,
+    "area_km2": 48583.6,
+    "density": 18.32,
+    "capital": "Puerto Montt"
+  },
+  {
+    "region": "Región de Aysén del General Carlos Ibáñez del Campo",
+    "population": 100745,
+    "area_km2": 108494.4,
+    "density": 0.93,
+    "capital": "Coyhaique"
+  },
+  {
+    "region": "Región de Magallanes y de la Antártica Chilena",
+    "population": 166537,
+    "area_km2": 132297.2,
+    "density": 1.26,
+    "capital": "Punta Arenas"
+  }
+]

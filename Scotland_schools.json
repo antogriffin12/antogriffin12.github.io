@@ -1,0 +1,59 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Map showing Scottish schools by pupil enrollment.",
+  "title": {
+    "text": "Scotland: Schools by Pupil Enrollment",
+    "fontSize": 16,
+    "anchor": "middle"
+  },
+  "width": 350,
+  "height": 450,
+  "layer": [
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/jhellingsdata/RADataHub/refs/heads/main/MappingWorkshop/geo_data/LAD_SCT_2025_05.topojson",
+        "format": {"type": "topojson", "feature": "object_name"}
+      },
+      "mark": {
+        "type": "geoshape",
+        "fill": "lightgray",
+        "stroke": "white",
+        "strokeWidth": 0.5
+      }
+    },
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/antogriffin12/antogriffin12.github.io/refs/heads/main/Portafolio/SG_SchoolRoll_2023.csv"
+      },
+      "mark": {
+        "type": "circle",
+        "opacity": 0.6
+      },
+      "encoding": {
+        "longitude": {"field": "Longitude", "type": "quantitative"},
+        "latitude": {"field": "Latitude", "type": "quantitative"},
+        "size": {
+          "field": "PupilRoll",
+          "type": "quantitative",
+          "scale": {"range": [10, 400]},
+          "title": "Pupils"
+        },
+        "color": {
+          "field": "SchoolType",
+          "type": "nominal",
+          "scale": {"scheme": "category10"},
+          "title": "School Type"
+        },
+        "tooltip": [
+          {"field": "SchoolName", "type": "nominal", "title": "School"},
+          {"field": "LAName", "type": "nominal", "title": "Local Authority"},
+          {"field": "PupilRoll", "type": "quantitative", "title": "Pupils", "format": ","},
+          {"field": "SchoolType", "type": "nominal", "title": "Type"}
+        ]
+      }
+    }
+  ],
+  "projection": {
+    "type": "mercator"
+  }
+}

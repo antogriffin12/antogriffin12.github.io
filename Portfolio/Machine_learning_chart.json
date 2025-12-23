@@ -1,0 +1,79 @@
+{
+  "config": {
+    "view": {"continuousWidth": 300, "continuousHeight": 300, "strokeWidth": 0},
+    "axis": {"gridOpacity": 0.3}
+  },
+  "data": {"name": "data-d5c0d8ad99497ff38e5c4dbe23340f0c"},
+  "mark": {"type": "line", "point": true, "size": 3},
+  "encoding": {
+    "color": {
+      "field": "type",
+      "legend": {"title": "Data Type"},
+      "scale": {
+        "domain": ["Actual Data", "Model Fit"],
+        "range": ["blue", "green"]
+      },
+      "type": "nominal"
+    },
+    "strokeDash": {
+      "field": "type",
+      "scale": {"domain": ["Actual Data", "Model Fit"], "range": [[0], [5, 5]]},
+      "type": "nominal"
+    },
+    "tooltip": [
+      {"field": "year", "title": "Year", "type": "ordinal"},
+      {"field": "type", "title": "Type", "type": "nominal"},
+      {
+        "field": "value",
+        "format": ".2f",
+        "title": "Life Expectancy",
+        "type": "quantitative"
+      }
+    ],
+    "x": {
+      "axis": {"labelAngle": -45},
+      "field": "year",
+      "title": "Year",
+      "type": "ordinal"
+    },
+    "y": {
+      "field": "value",
+      "scale": {"domain": [76, 82]},
+      "title": "Life Expectancy (years)",
+      "type": "quantitative"
+    }
+  },
+  "height": 400,
+  "title": {
+    "text": "Life Expectancy in Chile: Machine Learning Model Fit",
+    "subtitle": "R² = 0.916 | RMSE = 0.28 years | Data: World Bank API (2000-2022)",
+    "fontSize": 16,
+    "subtitleFontSize": 12
+  },
+  "width": 700,
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.20.1.json",
+  "datasets": {
+    "data-d5c0d8ad99497ff38e5c4dbe23340f0c": [
+      {"year": 2000, "type": "Actual Data", "value": 77.128},
+      {"year": 2003, "type": "Actual Data", "value": 77.884},
+      {"year": 2006, "type": "Actual Data", "value": 78.533},
+      {"year": 2009, "type": "Actual Data", "value": 78.89},
+      {"year": 2011, "type": "Actual Data", "value": 79.236},
+      {"year": 2013, "type": "Actual Data", "value": 79.551},
+      {"year": 2015, "type": "Actual Data", "value": 80.008},
+      {"year": 2017, "type": "Actual Data", "value": 80.61},
+      {"year": 2020, "type": "Actual Data", "value": 79.349},
+      {"year": 2022, "type": "Actual Data", "value": 79.176},
+      {"year": 2000, "type": "Model Fit", "value": 77.52238431575104},
+      {"year": 2003, "type": "Model Fit", "value": 77.54998021294917},
+      {"year": 2006, "type": "Model Fit", "value": 78.44753096946295},
+      {"year": 2009, "type": "Model Fit", "value": 78.83648096762825},
+      {"year": 2011, "type": "Model Fit", "value": 79.07781193739287},
+      {"year": 2013, "type": "Model Fit", "value": 79.92333082057681},
+      {"year": 2015, "type": "Model Fit", "value": 80.10065944765994},
+      {"year": 2017, "type": "Model Fit", "value": 80.11612729528282},
+      {"year": 2020, "type": "Model Fit", "value": 79.61021471100771},
+      {"year": 2022, "type": "Model Fit", "value": 79.1804793222885}
+    ]
+  }
+}
