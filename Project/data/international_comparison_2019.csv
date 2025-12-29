@@ -1,0 +1,282 @@
+country,mortality_rate,category
+Africa Eastern and Southern,7.46227935302049,Other
+Africa Western and Central,10.6954447473832,Other
+Arab World,5.15505260686536,Other
+Caribbean small states,7.88444768827589,Other
+Central Europe and the Baltics,12.0266038994201,Other
+Early-demographic dividend,6.45731181271963,Other
+East Asia & Pacific,7.26815556714594,Other
+East Asia & Pacific (excluding high income),7.08774437953649,Other
+East Asia & Pacific (IDA & IBRD countries),7.0598429737917,Other
+Euro area,10.0686540428718,Other
+Europe & Central Asia,9.88562146060415,Other
+Europe & Central Asia (excluding high income),7.88800496309235,Other
+Europe & Central Asia (IDA & IBRD countries),9.90936909025111,Other
+European Union,10.4062280210304,Other
+Fragile and conflict affected situations,9.06893762393667,Other
+Heavily indebted poor countries (HIPC),7.74352191306767,Other
+High income,9.28464314220391,Other
+IBRD only,7.00450197280887,Other
+IDA & IBRD total,7.22680718604852,Other
+IDA blend,8.97482954250513,Other
+IDA only,7.23012791149078,Other
+IDA total,7.84258668742594,Other
+Late-demographic dividend,7.36261840994988,Other
+Latin America & Caribbean,6.38409505313831,Other
+Latin America & Caribbean (excluding high income),6.33758763234788,Other
+Latin America & the Caribbean (IDA & IBRD countries),6.30102482505453,Other
+Least developed countries: UN classification,7.36992663365829,Other
+Low & middle income,7.08523584773053,Other
+Low income,8.15662172197851,Other
+Lower middle income,7.01903121051127,Other
+"Middle East, North Africa, Afghanistan & Pakistan",5.47939645694138,Other
+"Middle East, North Africa, Afghanistan & Pakistan (excluding high income)",5.76039002544217,Other
+"Middle East, North Africa, Afghanistan & Pakistan (IDA & IBRD)",5.77859857430233,Other
+Middle income,6.9827744035196,Other
+North America,8.58483368893004,Other
+OECD members,8.55818518794502,Other
+Other small states,7.81557988893744,Other
+Pacific island small states,7.16709275200728,Other
+Post-demographic dividend,9.48730480419911,Other
+Pre-demographic dividend,8.89377740983353,Other
+Small states,7.74510342636769,Other
+South Asia,6.54194290208949,Other
+South Asia (IDA & IBRD),6.54194290208949,Other
+Sub-Saharan Africa,8.77722408503137,Other
+Sub-Saharan Africa (excluding high income),9.03695062775933,Other
+Sub-Saharan Africa (IDA & IBRD countries),8.77722408503137,Other
+Upper middle income,6.94444094854024,Other
+World,7.46817987625348,Other
+Afghanistan,7.064,Other
+Albania,7.473,Other
+Algeria,4.681,Other
+American Samoa,6.191,Other
+Andorra,5.56,Other
+Angola,7.701,Other
+Antigua and Barbuda,6.448,Other
+Argentina,7.676,Latin America
+Armenia,8.8,Other
+Aruba,6.145,Other
+Australia,6.7,OECD
+Austria,9.4,OECD
+Azerbaijan,5.6,Other
+"Bahamas, The",9.321,Other
+Bahrain,2.104,Other
+Bangladesh,5.372,Other
+Barbados,9.517,Other
+Belarus,12.8,Other
+Belgium,9.5,OECD
+Belize,5.04,Other
+Benin,9.335,Other
+Bermuda,8.705,Other
+Bhutan,6.35,Other
+Bolivia,7.555,Latin America
+Bosnia and Herzegovina,13.102,Other
+Botswana,6.408,Other
+Brazil,6.452,Latin America
+British Virgin Islands,5.724,Other
+Brunei Darussalam,4.779,Other
+Bulgaria,16.3,Other
+Burkina Faso,8.564,Other
+Burundi,7.394,Other
+Cabo Verde,5.004,Other
+Cambodia,6.189,Other
+Cameroon,8.163,Other
+Canada,7.6,OECD
+Cayman Islands,4.809,Other
+Central African Republic,30.25,Other
+Chad,12.519,Other
+Channel Islands,9.7,Other
+Chile,6.46,OECD
+China,7.09,Other
+Colombia,5.38,Latin America
+Comoros,7.644,Other
+"Congo, Dem. Rep.",9.46,Other
+"Congo, Rep.",7.344,Other
+Costa Rica,5.124,Latin America
+Cote d'Ivoire,8.492,Other
+Croatia,12.7,Other
+Cuba,10.047,Other
+Curacao,8.8,Other
+Cyprus,6.6,Other
+Czechia,10.5,OECD
+Denmark,9.3,OECD
+Djibouti,7.797,Other
+Dominica,12.611,Other
+Dominican Republic,6.132,Latin America
+Ecuador,4.753,Latin America
+"Egypt, Arab Rep.",5.477,Other
+El Salvador,7.439,Latin America
+Equatorial Guinea,8.496,Other
+Eritrea,6.413,Other
+Estonia,11.6,OECD
+Eswatini,9.372,Other
+Ethiopia,6.481,Other
+Faroe Islands,8.0,Other
+Fiji,9.092,Other
+Finland,9.8,OECD
+France,9.1,OECD
+French Polynesia,3.369,Other
+Gabon,6.693,Other
+"Gambia, The",6.807,Other
+Georgia,12.081,Other
+Germany,11.3,OECD
+Ghana,7.34,Other
+Gibraltar,6.811,Other
+Greece,11.7,OECD
+Greenland,9.7,Other
+Grenada,8.481,Other
+Guam,6.534,Other
+Guatemala,5.117,Latin America
+Guinea,9.945,Other
+Guinea-Bissau,7.863,Other
+Guyana,7.503,Other
+Haiti,7.876,Other
+Honduras,4.486,Latin America
+"Hong Kong SAR, China",6.5,Other
+Hungary,13.4,OECD
+Iceland,6.3,OECD
+India,6.67,Other
+Indonesia,7.558,Other
+"Iran, Islamic Rep.",4.659,Other
+Iraq,4.36,Other
+Ireland,6.2,OECD
+Isle of Man,10.085,Other
+Israel,5.1,OECD
+Italy,10.6,OECD
+Jamaica,7.531,Other
+Japan,11.2,OECD
+Jordan,3.033,Other
+Kazakhstan,6.911,Other
+Kenya,7.294,Other
+Kiribati,7.171,Other
+"Korea, Dem. People's Rep.",9.326,Other
+"Korea, Rep.",5.7,OECD
+Kosovo,5.702,Other
+Kuwait,1.64463780206516,Other
+Kyrgyz Republic,5.2,Other
+Lao PDR,6.599,Other
+Latvia,14.5,OECD
+Lebanon,5.458,Other
+Lesotho,11.83,Other
+Liberia,8.513,Other
+Libya,5.165,Other
+Liechtenstein,6.8,Other
+Lithuania,13.6,OECD
+Luxembourg,6.9,OECD
+"Macao SAR, China",3.4,Other
+Madagascar,7.518,Other
+Malawi,6.301,Other
+Malaysia,4.98,Other
+Maldives,2.579,Other
+Mali,9.475,Other
+Malta,7.3,Other
+Marshall Islands,6.787,Other
+Mauritania,6.115,Other
+Mauritius,8.8,Other
+Mexico,6.083,OECD
+"Micronesia, Fed. Sts.",7.6,Other
+Moldova,13.919,Other
+Monaco,22.362,Other
+Mongolia,5.6,Other
+Montenegro,10.5,Other
+Morocco,5.629,Other
+Mozambique,8.078,Other
+Myanmar,8.847,Other
+Namibia,7.722,Other
+Nauru,7.573,Other
+Nepal,7.024,Other
+Netherlands,8.8,OECD
+New Caledonia,6.278,Other
+New Zealand,6.87,OECD
+Nicaragua,4.95,Latin America
+Niger,9.573,Other
+Nigeria,12.679,Other
+North Macedonia,9.8,Other
+Northern Mariana Islands,4.142,Other
+Norway,7.6,OECD
+Oman,2.001,Other
+Pakistan,6.772,Other
+Palau,10.631,Other
+Panama,4.719,Latin America
+Papua New Guinea,6.624,Other
+Paraguay,5.584,Latin America
+Peru,6.16,Latin America
+Philippines,5.896,Other
+Poland,10.8,OECD
+Portugal,10.8,OECD
+Puerto Rico (US),9.194,Other
+Qatar,0.841,Other
+Romania,13.4,Other
+Russian Federation,12.3,Other
+Rwanda,6.132,Other
+Samoa,6.529,Other
+San Marino,7.2,Other
+Sao Tome and Principe,6.117,Other
+Saudi Arabia,2.295,Other
+Senegal,5.979,Other
+Serbia,14.6,Other
+Seychelles,8.1,Other
+Sierra Leone,9.39,Other
+Singapore,5.0,Other
+Sint Maarten (Dutch part),6.879,Other
+Slovak Republic,9.8,OECD
+Slovenia,9.9,OECD
+Solomon Islands,5.547,Other
+"Somalia, Fed. Rep.",10.908,Other
+South Africa,8.75,Other
+South Sudan,9.302,Other
+Spain,8.8,OECD
+Sri Lanka,6.7,Other
+St. Kitts and Nevis,9.985,Other
+St. Lucia,8.425,Other
+St. Martin (French part),6.886,Other
+St. Vincent and the Grenadines,11.288,Other
+Sudan,6.549,Other
+Suriname,7.034,Other
+Sweden,8.6,OECD
+Switzerland,7.9,OECD
+Syrian Arab Republic,5.284,Other
+Tajikistan,4.843,Other
+Tanzania,6.183,Other
+Thailand,7.422,Other
+Timor-Leste,7.477,Other
+Togo,8.394,Other
+Tonga,6.426,Other
+Trinidad and Tobago,7.948,Other
+Tunisia,6.099,Other
+Turkiye,5.3,OECD
+Turkmenistan,5.986,Other
+Turks and Caicos Islands,7.04,Other
+Tuvalu,9.19,Other
+Uganda,5.42,Other
+Ukraine,13.079,Other
+United Arab Emirates,0.958,Other
+United Kingdom,9.019,OECD
+United States,8.697,OECD
+Uruguay,9.754,Latin America
+Uzbekistan,5.97,Other
+Vanuatu,5.494,Other
+"Venezuela, RB",6.802,Latin America
+Viet Nam,6.3,Other
+Virgin Islands (U.S.),8.2,Other
+West Bank and Gaza,3.134,Other
+"Yemen, Rep.",5.859,Other
+Zambia,6.482,Other
+Zimbabwe,8.281,Other
+Aisén del General Carlos Ibáñez del Campo,5.00562429696288,Chilean Regions
+Antofagasta,4.618861648042144,Chilean Regions
+Arica y Parinacota,5.331206787674671,Chilean Regions
+Atacama,5.023979544308351,Chilean Regions
+Bío-Bío,6.001532563345146,Chilean Regions
+Coquimbo,5.4762779807381055,Chilean Regions
+La Araucanía,6.796862986314008,Chilean Regions
+Libertador General Bernardo O'Higgins,5.967096687193779,Chilean Regions
+Los Lagos,5.898487671629371,Chilean Regions
+Los Ríos,6.635879359366208,Chilean Regions
+Magallanes y de la Antártica Chilena,6.568778979907265,Chilean Regions
+Maule,6.131657710329443,Chilean Regions
+Región Metropolitana de Santiago,5.289317425878996,Chilean Regions
+Tarapacá,4.160951570318725,Chilean Regions
+Valparaíso,6.853168893102656,Chilean Regions
+Ñuble,6.801730060890741,Chilean Regions
