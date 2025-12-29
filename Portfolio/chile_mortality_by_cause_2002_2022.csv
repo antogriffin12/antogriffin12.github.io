@@ -3454,6 +3454,7 @@ year,region_clean,causa_nombre,defunciones
 2019,Ñuble,Respiratory diseases,356
 2019,Ñuble,Symptoms (unclassified),65
 2019,Ñuble,Tumors (Cancer),976
+2020,Aisén del General Carlos Ibáñez del Campo,COVID-19,15
 2020,Aisén del General Carlos Ibáñez del Campo,Circulatory diseases,138
 2020,Aisén del General Carlos Ibáñez del Campo,Congenital malformations,2
 2020,Aisén del General Carlos Ibáñez del Campo,Digestive diseases,69
@@ -3466,6 +3467,7 @@ year,region_clean,causa_nombre,defunciones
 2020,Aisén del General Carlos Ibáñez del Campo,Respiratory diseases,43
 2020,Aisén del General Carlos Ibáñez del Campo,Symptoms (unclassified),8
 2020,Aisén del General Carlos Ibáñez del Campo,Tumors (Cancer),169
+2020,Antofagasta,COVID-19,651
 2020,Antofagasta,Circulatory diseases,682
 2020,Antofagasta,Congenital malformations,24
 2020,Antofagasta,Digestive diseases,231
@@ -3478,6 +3480,7 @@ year,region_clean,causa_nombre,defunciones
 2020,Antofagasta,Respiratory diseases,271
 2020,Antofagasta,Symptoms (unclassified),75
 2020,Antofagasta,Tumors (Cancer),897
+2020,Arica y Parinacota,COVID-19,229
 2020,Arica y Parinacota,Circulatory diseases,340
 2020,Arica y Parinacota,Congenital malformations,10
 2020,Arica y Parinacota,Digestive diseases,101
@@ -3490,6 +3493,7 @@ year,region_clean,causa_nombre,defunciones
 2020,Arica y Parinacota,Respiratory diseases,93
 2020,Arica y Parinacota,Symptoms (unclassified),30
 2020,Arica y Parinacota,Tumors (Cancer),416
+2020,Atacama,COVID-19,110
 2020,Atacama,Circulatory diseases,411
 2020,Atacama,Congenital malformations,17
 2020,Atacama,Digestive diseases,121
@@ -3502,6 +3506,7 @@ year,region_clean,causa_nombre,defunciones
 2020,Atacama,Respiratory diseases,158
 2020,Atacama,Symptoms (unclassified),50
 2020,Atacama,Tumors (Cancer),430
+2020,Bío-Bío,COVID-19,827
 2020,Bío-Bío,Circulatory diseases,2557
 2020,Bío-Bío,Congenital malformations,70
 2020,Bío-Bío,Digestive diseases,879
@@ -3514,6 +3519,7 @@ year,region_clean,causa_nombre,defunciones
 2020,Bío-Bío,Respiratory diseases,800
 2020,Bío-Bío,Symptoms (unclassified),258
 2020,Bío-Bío,Tumors (Cancer),2906
+2020,Coquimbo,COVID-19,334
 2020,Coquimbo,Circulatory diseases,1204
 2020,Coquimbo,Congenital malformations,30
 2020,Coquimbo,Digestive diseases,325
@@ -3526,6 +3532,7 @@ year,region_clean,causa_nombre,defunciones
 2020,Coquimbo,Respiratory diseases,384
 2020,Coquimbo,Symptoms (unclassified),173
 2020,Coquimbo,Tumors (Cancer),1272
+2020,La Araucanía,COVID-19,404
 2020,La Araucanía,Circulatory diseases,1667
 2020,La Araucanía,Congenital malformations,39
 2020,La Araucanía,Digestive diseases,544
@@ -3538,6 +3545,7 @@ year,region_clean,causa_nombre,defunciones
 2020,La Araucanía,Respiratory diseases,614
 2020,La Araucanía,Symptoms (unclassified),268
 2020,La Araucanía,Tumors (Cancer),1850
+2020,Libertador General Bernardo O'Higgins,COVID-19,716
 2020,Libertador General Bernardo O'Higgins,Circulatory diseases,1547
 2020,Libertador General Bernardo O'Higgins,Congenital malformations,42
 2020,Libertador General Bernardo O'Higgins,Digestive diseases,447
@@ -3550,6 +3558,7 @@ year,region_clean,causa_nombre,defunciones
 2020,Libertador General Bernardo O'Higgins,Respiratory diseases,581
 2020,Libertador General Bernardo O'Higgins,Symptoms (unclassified),127
 2020,Libertador General Bernardo O'Higgins,Tumors (Cancer),1560
+2020,Los Lagos,COVID-19,296
 2020,Los Lagos,Circulatory diseases,1403
 2020,Los Lagos,Congenital malformations,29
 2020,Los Lagos,Digestive diseases,525
@@ -3562,6 +3571,7 @@ year,region_clean,causa_nombre,defunciones
 2020,Los Lagos,Respiratory diseases,447
 2020,Los Lagos,Symptoms (unclassified),139
 2020,Los Lagos,Tumors (Cancer),1488
+2020,Los Ríos,COVID-19,111
 2020,Los Ríos,Circulatory diseases,679
 2020,Los Ríos,Congenital malformations,20
 2020,Los Ríos,Digestive diseases,256
@@ -3574,6 +3584,7 @@ year,region_clean,causa_nombre,defunciones
 2020,Los Ríos,Respiratory diseases,203
 2020,Los Ríos,Symptoms (unclassified),86
 2020,Los Ríos,Tumors (Cancer),753
+2020,Magallanes y de la Antártica Chilena,COVID-19,228
 2020,Magallanes y de la Antártica Chilena,Circulatory diseases,319
 2020,Magallanes y de la Antártica Chilena,Congenital malformations,3
 2020,Magallanes y de la Antártica Chilena,Digestive diseases,81
@@ -3586,6 +3597,7 @@ year,region_clean,causa_nombre,defunciones
 2020,Magallanes y de la Antártica Chilena,Respiratory diseases,76
 2020,Magallanes y de la Antártica Chilena,Symptoms (unclassified),37
 2020,Magallanes y de la Antártica Chilena,Tumors (Cancer),312
+2020,Maule,COVID-19,610
 2020,Maule,Circulatory diseases,1789
 2020,Maule,Congenital malformations,48
 2020,Maule,Digestive diseases,570
@@ -3598,6 +3610,7 @@ year,region_clean,causa_nombre,defunciones
 2020,Maule,Respiratory diseases,677
 2020,Maule,Symptoms (unclassified),144
 2020,Maule,Tumors (Cancer),1958
+2020,Región Metropolitana de Santiago,COVID-19,12099
 2020,Región Metropolitana de Santiago,Circulatory diseases,10880
 2020,Región Metropolitana de Santiago,Congenital malformations,253
 2020,Región Metropolitana de Santiago,Digestive diseases,2951
@@ -3610,6 +3623,7 @@ year,region_clean,causa_nombre,defunciones
 2020,Región Metropolitana de Santiago,Respiratory diseases,4161
 2020,Región Metropolitana de Santiago,Symptoms (unclassified),1130
 2020,Región Metropolitana de Santiago,Tumors (Cancer),10343
+2020,Tarapacá,COVID-19,306
 2020,Tarapacá,Circulatory diseases,378
 2020,Tarapacá,Congenital malformations,4
 2020,Tarapacá,Digestive diseases,125
@@ -3622,6 +3636,7 @@ year,region_clean,causa_nombre,defunciones
 2020,Tarapacá,Respiratory diseases,150
 2020,Tarapacá,Symptoms (unclassified),40
 2020,Tarapacá,Tumors (Cancer),380
+2020,Valparaíso,COVID-19,1526
 2020,Valparaíso,Circulatory diseases,3996
 2020,Valparaíso,Congenital malformations,67
 2020,Valparaíso,Digestive diseases,852
@@ -3634,6 +3649,7 @@ year,region_clean,causa_nombre,defunciones
 2020,Valparaíso,Respiratory diseases,1053
 2020,Valparaíso,Symptoms (unclassified),290
 2020,Valparaíso,Tumors (Cancer),3548
+2020,Ñuble,COVID-19,218
 2020,Ñuble,Circulatory diseases,1045
 2020,Ñuble,Congenital malformations,19
 2020,Ñuble,Digestive diseases,312
@@ -3646,6 +3662,7 @@ year,region_clean,causa_nombre,defunciones
 2020,Ñuble,Respiratory diseases,277
 2020,Ñuble,Symptoms (unclassified),68
 2020,Ñuble,Tumors (Cancer),929
+2021,Aisén del General Carlos Ibáñez del Campo,COVID-19,80
 2021,Aisén del General Carlos Ibáñez del Campo,Circulatory diseases,143
 2021,Aisén del General Carlos Ibáñez del Campo,Congenital malformations,3
 2021,Aisén del General Carlos Ibáñez del Campo,Digestive diseases,72
@@ -3658,6 +3675,7 @@ year,region_clean,causa_nombre,defunciones
 2021,Aisén del General Carlos Ibáñez del Campo,Respiratory diseases,32
 2021,Aisén del General Carlos Ibáñez del Campo,Symptoms (unclassified),22
 2021,Aisén del General Carlos Ibáñez del Campo,Tumors (Cancer),156
+2021,Antofagasta,COVID-19,678
 2021,Antofagasta,Circulatory diseases,710
 2021,Antofagasta,Congenital malformations,23
 2021,Antofagasta,Digestive diseases,257
@@ -3670,6 +3688,7 @@ year,region_clean,causa_nombre,defunciones
 2021,Antofagasta,Respiratory diseases,297
 2021,Antofagasta,Symptoms (unclassified),77
 2021,Antofagasta,Tumors (Cancer),858
+2021,Arica y Parinacota,COVID-19,327
 2021,Arica y Parinacota,Circulatory diseases,435
 2021,Arica y Parinacota,Congenital malformations,10
 2021,Arica y Parinacota,Digestive diseases,121
@@ -3682,6 +3701,7 @@ year,region_clean,causa_nombre,defunciones
 2021,Arica y Parinacota,Respiratory diseases,112
 2021,Arica y Parinacota,Symptoms (unclassified),28
 2021,Arica y Parinacota,Tumors (Cancer),414
+2021,Atacama,COVID-19,269
 2021,Atacama,Circulatory diseases,432
 2021,Atacama,Congenital malformations,11
 2021,Atacama,Digestive diseases,120
@@ -3694,6 +3714,7 @@ year,region_clean,causa_nombre,defunciones
 2021,Atacama,Respiratory diseases,160
 2021,Atacama,Symptoms (unclassified),63
 2021,Atacama,Tumors (Cancer),425
+2021,Bío-Bío,COVID-19,1917
 2021,Bío-Bío,Circulatory diseases,2794
 2021,Bío-Bío,Congenital malformations,72
 2021,Bío-Bío,Digestive diseases,888
@@ -3706,6 +3727,7 @@ year,region_clean,causa_nombre,defunciones
 2021,Bío-Bío,Respiratory diseases,880
 2021,Bío-Bío,Symptoms (unclassified),301
 2021,Bío-Bío,Tumors (Cancer),3003
+2021,Coquimbo,COVID-19,834
 2021,Coquimbo,Circulatory diseases,1442
 2021,Coquimbo,Congenital malformations,34
 2021,Coquimbo,Digestive diseases,360
@@ -3718,6 +3740,7 @@ year,region_clean,causa_nombre,defunciones
 2021,Coquimbo,Respiratory diseases,410
 2021,Coquimbo,Symptoms (unclassified),108
 2021,Coquimbo,Tumors (Cancer),1367
+2021,La Araucanía,COVID-19,1159
 2021,La Araucanía,Circulatory diseases,1865
 2021,La Araucanía,Congenital malformations,33
 2021,La Araucanía,Digestive diseases,707
@@ -3730,6 +3753,7 @@ year,region_clean,causa_nombre,defunciones
 2021,La Araucanía,Respiratory diseases,650
 2021,La Araucanía,Symptoms (unclassified),310
 2021,La Araucanía,Tumors (Cancer),1937
+2021,Libertador General Bernardo O'Higgins,COVID-19,1090
 2021,Libertador General Bernardo O'Higgins,Circulatory diseases,1702
 2021,Libertador General Bernardo O'Higgins,Congenital malformations,40
 2021,Libertador General Bernardo O'Higgins,Digestive diseases,528
@@ -3742,6 +3766,7 @@ year,region_clean,causa_nombre,defunciones
 2021,Libertador General Bernardo O'Higgins,Respiratory diseases,519
 2021,Libertador General Bernardo O'Higgins,Symptoms (unclassified),149
 2021,Libertador General Bernardo O'Higgins,Tumors (Cancer),1646
+2021,Los Lagos,COVID-19,1177
 2021,Los Lagos,Circulatory diseases,1516
 2021,Los Lagos,Congenital malformations,34
 2021,Los Lagos,Digestive diseases,714
@@ -3754,6 +3779,7 @@ year,region_clean,causa_nombre,defunciones
 2021,Los Lagos,Respiratory diseases,490
 2021,Los Lagos,Symptoms (unclassified),151
 2021,Los Lagos,Tumors (Cancer),1552
+2021,Los Ríos,COVID-19,608
 2021,Los Ríos,Circulatory diseases,808
 2021,Los Ríos,Congenital malformations,10
 2021,Los Ríos,Digestive diseases,324
@@ -3766,6 +3792,7 @@ year,region_clean,causa_nombre,defunciones
 2021,Los Ríos,Respiratory diseases,228
 2021,Los Ríos,Symptoms (unclassified),93
 2021,Los Ríos,Tumors (Cancer),759
+2021,Magallanes y de la Antártica Chilena,COVID-19,228
 2021,Magallanes y de la Antártica Chilena,Circulatory diseases,329
 2021,Magallanes y de la Antártica Chilena,Congenital malformations,8
 2021,Magallanes y de la Antártica Chilena,Digestive diseases,97
@@ -3778,6 +3805,7 @@ year,region_clean,causa_nombre,defunciones
 2021,Magallanes y de la Antártica Chilena,Respiratory diseases,77
 2021,Magallanes y de la Antártica Chilena,Symptoms (unclassified),37
 2021,Magallanes y de la Antártica Chilena,Tumors (Cancer),304
+2021,Maule,COVID-19,1234
 2021,Maule,Circulatory diseases,2061
 2021,Maule,Congenital malformations,44
 2021,Maule,Digestive diseases,618
@@ -3790,6 +3818,7 @@ year,region_clean,causa_nombre,defunciones
 2021,Maule,Respiratory diseases,702
 2021,Maule,Symptoms (unclassified),179
 2021,Maule,Tumors (Cancer),1986
+2021,Región Metropolitana de Santiago,COVID-19,9944
 2021,Región Metropolitana de Santiago,Circulatory diseases,11588
 2021,Región Metropolitana de Santiago,Congenital malformations,251
 2021,Región Metropolitana de Santiago,Digestive diseases,3365
@@ -3802,6 +3831,7 @@ year,region_clean,causa_nombre,defunciones
 2021,Región Metropolitana de Santiago,Respiratory diseases,4136
 2021,Región Metropolitana de Santiago,Symptoms (unclassified),1001
 2021,Región Metropolitana de Santiago,Tumors (Cancer),10782
+2021,Tarapacá,COVID-19,536
 2021,Tarapacá,Circulatory diseases,441
 2021,Tarapacá,Congenital malformations,12
 2021,Tarapacá,Digestive diseases,115
@@ -3814,6 +3844,7 @@ year,region_clean,causa_nombre,defunciones
 2021,Tarapacá,Respiratory diseases,123
 2021,Tarapacá,Symptoms (unclassified),32
 2021,Tarapacá,Tumors (Cancer),367
+2021,Valparaíso,COVID-19,2419
 2021,Valparaíso,Circulatory diseases,4320
 2021,Valparaíso,Congenital malformations,56
 2021,Valparaíso,Digestive diseases,979
@@ -3826,6 +3857,7 @@ year,region_clean,causa_nombre,defunciones
 2021,Valparaíso,Respiratory diseases,1044
 2021,Valparaíso,Symptoms (unclassified),340
 2021,Valparaíso,Tumors (Cancer),3559
+2021,Ñuble,COVID-19,446
 2021,Ñuble,Circulatory diseases,1143
 2021,Ñuble,Congenital malformations,23
 2021,Ñuble,Digestive diseases,361
@@ -3838,6 +3870,7 @@ year,region_clean,causa_nombre,defunciones
 2021,Ñuble,Respiratory diseases,288
 2021,Ñuble,Symptoms (unclassified),55
 2021,Ñuble,Tumors (Cancer),922
+2022,Aisén del General Carlos Ibáñez del Campo,COVID-19,87
 2022,Aisén del General Carlos Ibáñez del Campo,Circulatory diseases,143
 2022,Aisén del General Carlos Ibáñez del Campo,Congenital malformations,1
 2022,Aisén del General Carlos Ibáñez del Campo,Digestive diseases,77
@@ -3850,6 +3883,7 @@ year,region_clean,causa_nombre,defunciones
 2022,Aisén del General Carlos Ibáñez del Campo,Respiratory diseases,55
 2022,Aisén del General Carlos Ibáñez del Campo,Symptoms (unclassified),11
 2022,Aisén del General Carlos Ibáñez del Campo,Tumors (Cancer),161
+2022,Antofagasta,COVID-19,365
 2022,Antofagasta,Circulatory diseases,775
 2022,Antofagasta,Congenital malformations,11
 2022,Antofagasta,Digestive diseases,266
@@ -3862,6 +3896,7 @@ year,region_clean,causa_nombre,defunciones
 2022,Antofagasta,Respiratory diseases,345
 2022,Antofagasta,Symptoms (unclassified),95
 2022,Antofagasta,Tumors (Cancer),942
+2022,Arica y Parinacota,COVID-19,212
 2022,Arica y Parinacota,Circulatory diseases,371
 2022,Arica y Parinacota,Congenital malformations,6
 2022,Arica y Parinacota,Digestive diseases,174
@@ -3874,6 +3909,7 @@ year,region_clean,causa_nombre,defunciones
 2022,Arica y Parinacota,Respiratory diseases,146
 2022,Arica y Parinacota,Symptoms (unclassified),44
 2022,Arica y Parinacota,Tumors (Cancer),399
+2022,Atacama,COVID-19,200
 2022,Atacama,Circulatory diseases,436
 2022,Atacama,Congenital malformations,10
 2022,Atacama,Digestive diseases,121
@@ -3886,6 +3922,7 @@ year,region_clean,causa_nombre,defunciones
 2022,Atacama,Respiratory diseases,175
 2022,Atacama,Symptoms (unclassified),154
 2022,Atacama,Tumors (Cancer),410
+2022,Bío-Bío,COVID-19,1231
 2022,Bío-Bío,Circulatory diseases,2983
 2022,Bío-Bío,Congenital malformations,82
 2022,Bío-Bío,Digestive diseases,959
@@ -3898,6 +3935,7 @@ year,region_clean,causa_nombre,defunciones
 2022,Bío-Bío,Respiratory diseases,1161
 2022,Bío-Bío,Symptoms (unclassified),259
 2022,Bío-Bío,Tumors (Cancer),3076
+2022,Coquimbo,COVID-19,538
 2022,Coquimbo,Circulatory diseases,1583
 2022,Coquimbo,Congenital malformations,31
 2022,Coquimbo,Digestive diseases,351
@@ -3910,6 +3948,7 @@ year,region_clean,causa_nombre,defunciones
 2022,Coquimbo,Respiratory diseases,492
 2022,Coquimbo,Symptoms (unclassified),156
 2022,Coquimbo,Tumors (Cancer),1354
+2022,La Araucanía,COVID-19,761
 2022,La Araucanía,Circulatory diseases,1925
 2022,La Araucanía,Congenital malformations,50
 2022,La Araucanía,Digestive diseases,619
@@ -3922,6 +3961,7 @@ year,region_clean,causa_nombre,defunciones
 2022,La Araucanía,Respiratory diseases,882
 2022,La Araucanía,Symptoms (unclassified),282
 2022,La Araucanía,Tumors (Cancer),1867
+2022,Libertador General Bernardo O'Higgins,COVID-19,657
 2022,Libertador General Bernardo O'Higgins,Circulatory diseases,1944
 2022,Libertador General Bernardo O'Higgins,Congenital malformations,36
 2022,Libertador General Bernardo O'Higgins,Digestive diseases,520
@@ -3934,6 +3974,7 @@ year,region_clean,causa_nombre,defunciones
 2022,Libertador General Bernardo O'Higgins,Respiratory diseases,786
 2022,Libertador General Bernardo O'Higgins,Symptoms (unclassified),130
 2022,Libertador General Bernardo O'Higgins,Tumors (Cancer),1714
+2022,Los Lagos,COVID-19,692
 2022,Los Lagos,Circulatory diseases,1663
 2022,Los Lagos,Congenital malformations,34
 2022,Los Lagos,Digestive diseases,641
@@ -3946,6 +3987,7 @@ year,region_clean,causa_nombre,defunciones
 2022,Los Lagos,Respiratory diseases,700
 2022,Los Lagos,Symptoms (unclassified),137
 2022,Los Lagos,Tumors (Cancer),1528
+2022,Los Ríos,COVID-19,444
 2022,Los Ríos,Circulatory diseases,754
 2022,Los Ríos,Congenital malformations,15
 2022,Los Ríos,Digestive diseases,303
@@ -3958,6 +4000,7 @@ year,region_clean,causa_nombre,defunciones
 2022,Los Ríos,Respiratory diseases,339
 2022,Los Ríos,Symptoms (unclassified),72
 2022,Los Ríos,Tumors (Cancer),759
+2022,Magallanes y de la Antártica Chilena,COVID-19,166
 2022,Magallanes y de la Antártica Chilena,Circulatory diseases,274
 2022,Magallanes y de la Antártica Chilena,Congenital malformations,3
 2022,Magallanes y de la Antártica Chilena,Digestive diseases,99
@@ -3970,6 +4013,7 @@ year,region_clean,causa_nombre,defunciones
 2022,Magallanes y de la Antártica Chilena,Respiratory diseases,98
 2022,Magallanes y de la Antártica Chilena,Symptoms (unclassified),49
 2022,Magallanes y de la Antártica Chilena,Tumors (Cancer),288
+2022,Maule,COVID-19,967
 2022,Maule,Circulatory diseases,2271
 2022,Maule,Congenital malformations,31
 2022,Maule,Digestive diseases,572
@@ -3982,6 +4026,7 @@ year,region_clean,causa_nombre,defunciones
 2022,Maule,Respiratory diseases,905
 2022,Maule,Symptoms (unclassified),246
 2022,Maule,Tumors (Cancer),1974
+2022,Región Metropolitana de Santiago,COVID-19,4892
 2022,Región Metropolitana de Santiago,Circulatory diseases,12114
 2022,Región Metropolitana de Santiago,Congenital malformations,249
 2022,Región Metropolitana de Santiago,Digestive diseases,3344
@@ -3994,6 +4039,7 @@ year,region_clean,causa_nombre,defunciones
 2022,Región Metropolitana de Santiago,Respiratory diseases,5474
 2022,Región Metropolitana de Santiago,Symptoms (unclassified),1112
 2022,Región Metropolitana de Santiago,Tumors (Cancer),10991
+2022,Tarapacá,COVID-19,219
 2022,Tarapacá,Circulatory diseases,475
 2022,Tarapacá,Congenital malformations,18
 2022,Tarapacá,Digestive diseases,127
@@ -4006,6 +4052,7 @@ year,region_clean,causa_nombre,defunciones
 2022,Tarapacá,Respiratory diseases,168
 2022,Tarapacá,Symptoms (unclassified),31
 2022,Tarapacá,Tumors (Cancer),398
+2022,Valparaíso,COVID-19,1574
 2022,Valparaíso,Circulatory diseases,4531
 2022,Valparaíso,Congenital malformations,72
 2022,Valparaíso,Digestive diseases,981
@@ -4018,6 +4065,7 @@ year,region_clean,causa_nombre,defunciones
 2022,Valparaíso,Respiratory diseases,1430
 2022,Valparaíso,Symptoms (unclassified),418
 2022,Valparaíso,Tumors (Cancer),3733
+2022,Ñuble,COVID-19,428
 2022,Ñuble,Circulatory diseases,1261
 2022,Ñuble,Congenital malformations,13
 2022,Ñuble,Digestive diseases,363
