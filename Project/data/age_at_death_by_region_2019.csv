@@ -1,0 +1,17 @@
+region_clean,mean_age,median_age,q25,q75,deaths,zona
+Aisén del General Carlos Ibáñez del Campo,68.5,72.0,57.0,83.0,527,South
+Antofagasta,69.6,72.0,60.0,83.0,3029,North
+Arica y Parinacota,71.1,75.0,62.0,84.0,1300,North
+Atacama,71.5,75.0,63.0,84.0,1542,North
+Bío-Bío,73.2,76.0,64.0,85.0,9794,South
+Coquimbo,74.0,78.0,65.0,87.0,4455,North
+La Araucanía,73.4,77.0,64.0,86.0,6763,South
+Libertador General Bernardo O'Higgins,72.6,76.0,63.0,86.0,5770,Center
+Los Lagos,71.5,75.0,62.0,85.0,5148,South
+Los Ríos,72.3,76.0,63.0,85.0,2648,South
+Magallanes y de la Antártica Chilena,71.6,75.0,62.0,85.0,1148,South
+Maule,72.8,76.0,64.0,85.0,6776,Center
+Región Metropolitana de Santiago,73.1,77.0,64.0,86.0,41330,Center
+Tarapacá,68.3,72.0,59.0,83.0,1506,North
+Valparaíso,74.5,78.0,66.0,87.0,13130,Center
+Ñuble,73.3,77.0,65.0,85.0,3419,South
