@@ -258,7 +258,7 @@
 
         countries.forEach((country, i) => {
             let spec = JSON.parse(JSON.stringify(baseSpec));
-            spec.data.url = `https://raw.githubusercontent.com/antogriffin12/antogriffin12.github.io/refs/heads/main/Portafolio/life_expectancy_${country.code}.json`;
+            spec.data.url = `https://raw.githubusercontent.com/antogriffin12/antogriffin12.github.io/refs/heads/main/Portfolio/life_expectancy_${country.code}.json`;
             spec.title.text = `Life Expectancy: ${country.name}`;
             vegaEmbed(`#chart${i}`, spec, {"renderer": "svg"});
         });
