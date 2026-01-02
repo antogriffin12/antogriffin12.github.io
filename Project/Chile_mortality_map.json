@@ -61,7 +61,7 @@
       "lookup": "region_mapped",
       "from": {
         "data": {
-          "url": "https://raw.githubusercontent.com/antogriffin12/antogriffin12.github.io/main/Portafolio/chilemap.json",
+          "url": "https://raw.githubusercontent.com/antogriffin12/antogriffin12.github.io/main/Portfolio/chilemap.json",
           "format": {
             "type": "json",
             "property": "features"
