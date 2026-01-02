@@ -1,0 +1,172 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Age structure as a determinant of regional mortality",
+    "subtitle": "Correlation between population aging (Swaroop Index) and mortality rates, 2019",
+    "anchor": "start",
+    "font": "Lora",
+    "fontSize": 18,
+    "color": "#1f2937",
+    "subtitleFont": "Karla",
+    "subtitleFontSize": 13,
+    "subtitleColor": "#6b7280"
+  },
+  "width": 650,
+  "height": 450,
+  "config": {
+    "axis": {
+      "labelFont": "Karla",
+      "titleFont": "Karla",
+      "labelColor": "#6b7280",
+      "titleColor": "#3d4144",
+      "gridOpacity": 0.25,
+      "gridColor": "#e5e7eb"
+    },
+    "legend": {
+      "labelFont": "Karla",
+      "titleFont": "Karla",
+      "labelColor": "#6b7280",
+      "titleColor": "#3d4144",
+      "labelFontSize": 11,
+      "titleFontSize": 12
+    },
+    "view": {
+      "strokeWidth": 0
+    }
+  },
+  "data": {
+    "url": "https://raw.githubusercontent.com/antogriffin12/antogriffin12.github.io/refs/heads/main/Project/data/swaroop_vs_mortality_2019.csv"
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "circle",
+        "opacity": 0.7,
+        "stroke": "white",
+        "strokeWidth": 0.5
+      },
+      "encoding": {
+        "x": {
+          "field": "swaroop_index",
+          "type": "quantitative",
+          "title": "Swaroop Index (% of deaths age 50+)",
+          "scale": {"domain": [82, 93]},
+          "axis": {"grid": true}
+        },
+        "y": {
+          "field": "tasa_mortalidad",
+          "type": "quantitative",
+          "title": "Mortality Rate (per 1,000)",
+          "scale": {"domain": [4, 7]},
+          "axis": {"grid": true}
+        },
+        "color": {
+          "field": "zona",
+          "type": "nominal",
+          "title": "Geographic Zone",
+          "scale": {
+            "domain": ["North", "Center", "South"],
+            "range": ["#e67e22", "#78716c", "#3b82f6"]
+          }
+        },
+        "size": {
+          "field": "poblacion",
+          "type": "quantitative",
+          "title": "Population",
+          "scale": {
+            "type": "sqrt",
+            "range": [100, 2000]
+          },
+          "legend": {
+            "format": ",.0f",
+            "values": [150000, 1000000, 4000000, 8000000]
+          }
+        },
+        "tooltip": [
+          {"field": "region_clean", "type": "nominal", "title": "Region"},
+          {"field": "tasa_mortalidad", "type": "quantitative", "title": "Mortality Rate", "format": ".2f"},
+          {"field": "swaroop_index", "type": "quantitative", "title": "Swaroop Index", "format": ".1f"},
+          {"field": "poblacion", "type": "quantitative", "title": "Population", "format": ","}
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "line",
+        "strokeDash": [5, 5],
+        "color": "#9ca3af",
+        "strokeWidth": 2.5
+      },
+      "transform": [
+        {
+          "regression": "tasa_mortalidad",
+          "on": "swaroop_index"
+        }
+      ],
+      "encoding": {
+        "x": {
+          "field": "swaroop_index",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "tasa_mortalidad",
+          "type": "quantitative"
+        }
+      }
+    },
+    {
+      "transform": [{"filter": "datum.region_clean == 'Ñuble'"}],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 12,
+        "dy": 0,
+        "fontSize": 10,
+        "font": "Karla",
+        "fontWeight": "bold",
+        "color": "#c4604f"
+      },
+      "encoding": {
+        "x": {"field": "swaroop_index", "type": "quantitative"},
+        "y": {"field": "tasa_mortalidad", "type": "quantitative"},
+        "text": {"value": "Ñuble"}
+      }
+    },
+    {
+      "transform": [{"filter": "datum.region_clean == 'Tarapacá'"}],
+      "mark": {
+        "type": "text",
+        "align": "center",
+        "dx": 0,
+        "dy": -18,
+        "fontSize": 10,
+        "font": "Karla",
+        "fontWeight": "bold",
+        "color": "#e67e22"
+      },
+      "encoding": {
+        "x": {"field": "swaroop_index", "type": "quantitative"},
+        "y": {"field": "tasa_mortalidad", "type": "quantitative"},
+        "text": {"value": "Tarapacá"}
+      }
+    },
+    {
+      "transform": [{"filter": "datum.region_clean == 'Región Metropolitana de Santiago'"}],
+      "mark": {
+        "type": "text",
+        "align": "center",
+        "dx": 0,
+        "dy": -28,
+        "fontSize": 10,
+        "font": "Karla",
+        "fontWeight": "bold",
+        "color": "#78716c"
+      },
+      "encoding": {
+        "x": {"field": "swaroop_index", "type": "quantitative"},
+        "y": {"field": "tasa_mortalidad", "type": "quantitative"},
+        "text": {"value": "Santiago"}
+      }
+    }
+  ]
+}

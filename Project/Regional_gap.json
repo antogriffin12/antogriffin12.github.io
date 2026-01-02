@@ -1,0 +1,220 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Regional mortality inequality in Chile",
+    "subtitle": "Shaded area shows the gap between highest and lowest mortality regions (2002-2022)",
+    "fontSize": 18,
+    "anchor": "start",
+    "font": "Lora",
+    "color": "#1f2937",
+    "subtitleFont": "Karla",
+    "subtitleFontSize": 13,
+    "subtitleColor": "#6b7280"
+  },
+  "width": 700,
+  "height": 450,
+  "config": {
+    "axis": {
+      "gridColor": "#e5e7eb",
+      "gridOpacity": 0.4,
+      "labelFont": "Karla",
+      "titleFont": "Karla",
+      "labelColor": "#6b7280",
+      "titleColor": "#3d4144"
+    },
+    "view": {"strokeWidth": 0}
+  },
+  "data": {
+    "url": "https://raw.githubusercontent.com/antogriffin12/antogriffin12.github.io/refs/heads/main/Project/data/regional_inequality_trend.csv"
+  },
+  "transform": [
+    {"calculate": "datum.max_rate - datum.min_rate", "as": "calculated_gap"}
+  ],
+  "encoding": {
+    "x": {
+      "field": "year",
+      "type": "quantitative",
+      "title": "Year",
+      "scale": {"domain": [2002, 2023]},
+      "axis": {"grid": false, "tickCount": 10, "format": "d"}
+    }
+  },
+  "layer": [
+    {
+      "mark": {"type": "area", "opacity": 0.15, "color": "#e7b8af"},
+      "encoding": {
+        "y": {
+          "field": "max_rate",
+          "type": "quantitative",
+          "title": "Mortality Rate (per 1,000)",
+          "scale": {"domain": [3.5, 10]},
+          "axis": {"grid": true, "gridOpacity": 0.4}
+        },
+        "y2": {"field": "min_rate"}
+      }
+    },
+    {
+      "mark": {
+        "type": "line",
+        "color": "#c4604f",
+        "strokeWidth": 2.5,
+        "interpolate": "monotone",
+        "point": {"filled": true, "size": 35, "color": "#c4604f"}
+      },
+      "encoding": {"y": {"field": "max_rate", "type": "quantitative"}}
+    },
+    {
+      "mark": {
+        "type": "line",
+        "color": "#78716c",
+        "strokeWidth": 2.5,
+        "interpolate": "monotone",
+        "point": {"filled": true, "size": 35, "color": "#78716c"}
+      },
+      "encoding": {"y": {"field": "min_rate", "type": "quantitative"}}
+    },
+    {
+      "mark": {
+        "type": "line",
+        "color": "#9ca3af",
+        "strokeWidth": 2,
+        "interpolate": "monotone",
+        "strokeDash": [5, 5]
+      },
+      "encoding": {"y": {"field": "mean_rate", "type": "quantitative"}}
+    },
+    {
+      "mark": {
+        "type": "rule",
+        "strokeWidth": 1.5,
+        "color": "#d6d3d1",
+        "strokeDash": [4, 4]
+      },
+      "encoding": {"x": {"datum": 2020}}
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "center",
+        "baseline": "bottom",
+        "dy": -5,
+        "fontSize": 11,
+        "color": "#78716c",
+        "fontWeight": "bold",
+        "font": "Karla"
+      },
+      "encoding": {
+        "x": {"datum": 2020},
+        "y": {"datum": 3.7},
+        "text": {"value": "COVID-19"}
+      }
+    },
+    {
+      "transform": [{"filter": "datum.year == 2022"}],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 5,
+        "dy": 0,
+        "fontSize": 11,
+        "fontWeight": "bold",
+        "color": "#c4604f",
+        "font": "Karla"
+      },
+      "encoding": {
+        "x": {"field": "year", "type": "quantitative"},
+        "y": {"field": "max_rate", "type": "quantitative"},
+        "text": {"value": "Highest mortality region"}
+      }
+    },
+    {
+      "transform": [{"filter": "datum.year == 2022"}],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 5,
+        "dy": 0,
+        "fontSize": 11,
+        "fontWeight": "bold",
+        "color": "#78716c",
+        "font": "Karla"
+      },
+      "encoding": {
+        "x": {"field": "year", "type": "quantitative"},
+        "y": {"field": "min_rate", "type": "quantitative"},
+        "text": {"value": "Lowest mortality region"}
+      }
+    },
+    {
+      "transform": [{"filter": "datum.year == 2022"}],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 5,
+        "dy": 0,
+        "fontSize": 10,
+        "fontStyle": "italic",
+        "color": "#9ca3af",
+        "font": "Karla"
+      },
+      "encoding": {
+        "x": {"field": "year", "type": "quantitative"},
+        "y": {"field": "mean_rate", "type": "quantitative"},
+        "text": {"value": "National average"}
+      }
+    },
+    {
+      "mark": {"type": "rule", "color": "#1f2937"},
+      "encoding": {
+        "opacity": {
+          "condition": {"param": "hover", "empty": false, "value": 0.2},
+          "value": 0
+        },
+        "tooltip": [
+          {
+            "field": "year",
+            "type": "quantitative",
+            "title": "Year",
+            "format": "d"
+          },
+          {
+            "field": "max_rate",
+            "type": "quantitative",
+            "title": "Max Rate (Highest)",
+            "format": ".2f"
+          },
+          {
+            "field": "min_rate",
+            "type": "quantitative",
+            "title": "Min Rate (Lowest)",
+            "format": ".2f"
+          },
+          {
+            "field": "mean_rate",
+            "type": "quantitative",
+            "title": "Average Rate",
+            "format": ".2f"
+          },
+          {
+            "field": "calculated_gap",
+            "type": "quantitative",
+            "title": "Inequality Gap",
+            "format": ".2f"
+          }
+        ]
+      },
+      "params": [
+        {
+          "name": "hover",
+          "select": {
+            "type": "point",
+            "fields": ["year"],
+            "nearest": true,
+            "on": "pointerover",
+            "clear": "pointerout"
+          }
+        }
+      ]
+    }
+  ]
+}

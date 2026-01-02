@@ -1,0 +1,157 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Mortality by cause of death",
+    "subtitle": "Select region to explore trends",
+    "anchor": "start",
+    "font": "Lora",
+    "fontSize": 18,
+    "color": "#1f2937",
+    "subtitleFont": "Karla",
+    "subtitleFontSize": 13,
+    "subtitleColor": "#6b7280"
+  },
+  "width": 600,
+  "height": 400,
+  "config": {
+    "axis": {
+      "labelFont": "Karla",
+      "titleFont": "Karla",
+      "labelColor": "#6b7280",
+      "titleColor": "#3d4144",
+      "gridOpacity": 0.3
+    },
+    "legend": {
+      "labelFont": "Karla",
+      "titleFont": "Karla",
+      "labelColor": "#6b7280",
+      "titleColor": "#3d4144"
+    },
+    "view": {
+      "strokeWidth": 0
+    }
+  },
+  "data": {
+    "url": "https://raw.githubusercontent.com/antogriffin12/antogriffin12.github.io/refs/heads/main/Project/data/chile_mortality_by_cause_2002_2022.csv"
+  },
+  "params": [
+    {
+      "name": "region_select",
+      "value": "Región Metropolitana de Santiago",
+      "bind": {
+        "input": "select",
+        "name": "Select Region: ",
+        "options": [
+          "Arica y Parinacota",
+          "Tarapacá",
+          "Antofagasta",
+          "Atacama",
+          "Coquimbo",
+          "Valparaíso",
+          "Región Metropolitana de Santiago",
+          "Libertador General Bernardo O'Higgins",
+          "Maule",
+          "Ñuble",
+          "Bío-Bío",
+          "La Araucanía",
+          "Los Ríos",
+          "Los Lagos",
+          "Aisén del General Carlos Ibáñez del Campo",
+          "Magallanes y de la Antártica Chilena"
+        ]
+      }
+    }
+  ],
+  "transform": [
+    {"filter": "datum.region_clean == region_select"},
+    {
+      "calculate": "indexof(['Circulatory diseases','Tumors (Cancer)','COVID-19','Respiratory diseases','Digestive diseases','Endocrine/Metabolic','Nervous system'], datum.causa_nombre) >= 0 ? datum.causa_nombre : 'Other causes'",
+      "as": "causa_grouped"
+    },
+    {
+      "aggregate": [{
+        "op": "sum",
+        "field": "defunciones",
+        "as": "defunciones_total"
+      }],
+      "groupby": ["year", "causa_grouped"]
+    }
+  ],
+  "mark": {
+    "type": "line",
+    "interpolate": "monotone",
+    "point": {
+      "filled": true,
+      "size": 50
+    }
+  },
+  "encoding": {
+    "x": {
+      "field": "year",
+      "type": "quantitative",
+      "title": "Year",
+      "axis": {"format": "d", "grid": false}
+    },
+    "y": {
+      "field": "defunciones_total",
+      "type": "quantitative",
+      "title": "Number of Deaths"
+    },
+    "color": {
+      "field": "causa_grouped",
+      "type": "nominal",
+      "title": "Cause of Death",
+      "scale": {
+        "domain": [
+          "Circulatory diseases",
+          "Tumors (Cancer)",
+          "COVID-19",
+          "Respiratory diseases",
+          "Digestive diseases",
+          "Endocrine/Metabolic",
+          "Nervous system",
+          "Other causes"
+        ],
+        "range": [
+          "#c4604f",
+          "#1f2937",
+          "#e74c3c",
+          "#78716c",
+          "#3498db",
+          "#e67e22",
+          "#9b59b6",
+          "#bdc3c7"
+        ]
+      },
+      "legend": {"labelLimit": 300}
+    },
+    "strokeWidth": {
+      "condition": {
+        "test": "datum.causa_grouped == 'COVID-19'",
+        "value": 2.5
+      },
+      "value": 2.5
+    },
+    "strokeDash": {
+      "condition": {
+        "test": "datum.causa_grouped == 'COVID-19'",
+        "value": [5, 5]
+      },
+      "value": [0]
+    },
+    "opacity": {
+      "condition": [
+        {
+          "test": "datum.causa_grouped == 'Circulatory diseases' || datum.causa_grouped == 'Tumors (Cancer)' || datum.causa_grouped == 'COVID-19' || datum.causa_grouped == 'Respiratory diseases'",
+          "value": 1
+        }
+      ],
+      "value": 0.5
+    },
+    "tooltip": [
+      {"field": "year", "type": "quantitative", "format": "d", "title": "Year"},
+      {"field": "causa_grouped", "type": "nominal", "title": "Cause"},
+      {"field": "defunciones_total", "type": "quantitative", "format": ",", "title": "Deaths"}
+    ]
+  }
+}

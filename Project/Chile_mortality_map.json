@@ -1,0 +1,116 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+  "title": {
+    "text": "Chile mortality rate by region",
+    "subtitle": "Deaths per 1,000 population",
+    "anchor": "middle",
+    "font": "Lora",
+    "fontSize": 18,
+    "color": "#1f2937",
+    "subtitleFont": "Karla",
+    "subtitleFontSize": 13,
+    "subtitleColor": "#6b7280"
+  },
+
+  "width": 400,
+  "height": 600,
+
+  "config": {
+    "axis": {
+      "labelFont": "Karla",
+      "titleFont": "Karla",
+      "labelColor": "#6b7280",
+      "titleColor": "#3d4144"
+    },
+    "legend": {
+      "labelFont": "Karla",
+      "titleFont": "Karla",
+      "labelColor": "#6b7280",
+      "titleColor": "#3d4144"
+    }
+  },
+
+  "data": {
+    "url": "https://raw.githubusercontent.com/antogriffin12/antogriffin12.github.io/main/Portfolio/chile_mortality_rates_2002_2022.csv"
+  },
+
+  "params": [
+    {
+      "name": "year_select",
+      "value": 2022,
+      "bind": {
+        "input": "range",
+        "min": 2002,
+        "max": 2022,
+        "step": 1,
+        "name": "Year: "
+      }
+    }
+  ],
+
+  "transform": [
+    {
+      "filter": "datum.year == year_select"
+    },
+    {
+      "calculate": "datum.region_clean == 'Magallanes y de la Antártica Chilena' ? 'Magallanes y Antártica Chilena' : datum.region_clean",
+      "as": "region_mapped"
+    },
+    {
+      "lookup": "region_mapped",
+      "from": {
+        "data": {
+          "url": "https://raw.githubusercontent.com/antogriffin12/antogriffin12.github.io/main/Portafolio/chilemap.json",
+          "format": {
+            "type": "json",
+            "property": "features"
+          }
+        },
+        "key": "properties.name",
+        "fields": ["type", "geometry", "properties"]
+      }
+    }
+  ],
+
+  "projection": {
+    "type": "mercator"
+  },
+
+  "mark": {
+    "type": "geoshape",
+    "stroke": "#ffffff",
+    "strokeWidth": 0.5
+  },
+
+  "encoding": {
+    "color": {
+      "field": "tasa_mortalidad",
+      "type": "quantitative",
+      "scale": {
+        "scheme": "reds",
+        "domain": [4, 9]
+      },
+      "title": "Mortality Rate (per 1,000)"
+    },
+    "tooltip": [
+      {
+        "field": "region_clean",
+        "type": "nominal",
+        "title": "Region"
+      },
+      {
+        "field": "tasa_mortalidad",
+        "type": "quantitative",
+        "title": "Mortality Rate",
+        "format": ".2f"
+      },
+      {
+        "field": "defunciones",
+        "type": "quantitative",
+        "title": "Total Deaths",
+        "format": ","
+      }
+    ]
+  }
+}

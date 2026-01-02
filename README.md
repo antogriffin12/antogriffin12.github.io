@@ -16,7 +16,7 @@ Contains the weekly assignments and visualisation tasks completed throughout the
 - Supporting data files and assets
 - Python notebooks for data processing and API access
 
-**View the portfolio:** [Portfolio Page](https://antogriffin12.github.io/Portafolio/portafolio.html)
+**View the portfolio:** [Portfolio Page](https://antogriffin12.github.io/Portfolio/portfolio.html)
 
 ### 2. Project
 Contains my final course project: **"Mapping Mortality in Chile: Visualising Regional Health Inequalities"**

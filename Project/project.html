@@ -1,180 +1,276 @@
-<!-- This HTML file provides a simple example of a portfolio page. It contains a header, a few sections, and a few charts. -->
-<!-- It works with the three css files in this folder: example1.css, example2.css and example3.css. -->
-<!-- The HTML file defines the structure of the page, and the CSS files define how it looks. -->
-<!-- The CSS examples are all designed to work with this page. Try swapping them out on line 29 and see what happens. -->
-
-<!-- Take a look around and make your own copy to adapt for your own use. -->
-
-<!-- This is a comment -->
-<!-- Comments are not displayed in the browser -->
-<!-- They can be used to leave notes in the code -->
-
 <!DOCTYPE html>
 <html> 
-    <!-- HTML is heirarchial: tags like this define elements on the page. 
-    Each tag does something different. For example:
-        - The <html> tag defines the whole document.
-        - The <h1> tag defines a large heading
-        - The <p> tag defines a paragraph
-        - Tags appear as an opening <div> and closing </div> pair
-    -->
 
 <head>    
-    <!-- The head tag links to resources our page needs and defines information about it. Tags in the <head> aren't displayed on the page. -->
-
-    <!-- This is a link to a stylesheet which contains rules about how each element on the page should be defined-->
-    <!-- Try swapping example1.css to another, and take a look at example1.css to see if you understand it-->
     <link rel="stylesheet" type="text/css" href="Example3.css">
-    <title>My Portfolio</title> <!-- The title displayed in the browser tab, not on the page itself -->
+    <title>Mapping Mortality in Chile | Antonia Griffin</title>
 
-    <!-- This is a link to the vega-lite which we're using to make graphs -->
+    <!-- Vega-Lite -->
     <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
-
-    <style>
-        #chartGrid {
-            display: flex;
-        }
-        
-    </style>
 </head>
 
 <body> 
-<!-- The body tag contains the elements that visitors to our page will see. -->
-    <h1 class="big" style="margin-bottom: 0px;"> <!-- We have added a class to the header called "big" which we can use to style it in the CSS -->
-        <!-- This is a header, it is the largest text on the page -->
-        Antonia Griffin
+    <h1 class="big" style="margin-bottom: 0px;">
+        Mapping Mortality in Chile
     </h1>
-    <p style="margin-top: 0px; color: darkblue">
-        <!-- we're setting the margin to 0px so the header and authour name are close together -->
-        Antonia Griffin | <a href="https://www.linkedin.com/in/antonia-griffin-cuadra">LinkedIn</a> | <a
-            href="https://www.github.com/antogriffin12">GitHub</a>| <a
-            href="https://antogriffin12.github.io/Portfolio/portfolio.html">Portafolio</a> 
+    <p class="author-info">
+        Antonia Griffin | 
+        <a href="https://www.linkedin.com/in/antonia-griffin-cuadra" target="_blank">LinkedIn</a> | 
+        <a href="https://www.github.com/antogriffin12" target="_blank">GitHub</a> | 
+        <a href="https://antogriffin12.github.io/Portfolio/portfolio.html" target="_blank">Portfolio</a> 
     </p>
-    <h3 class="small"> <!-- We have added a class to the header called "small" which we can use to style it in the CSS -->
-        This page acts as your portfolio of charts. You can use it as a good starting point to display your work but make sure to customise it to make it your own, or even start from scratch.  
+    <h3 class="small">
+        This is my final project for PP434: Automated Data Visualisation for Public Policy.
     </h3>
 
-    <!-- We're organising the page into sections, with each section containing a chart, title and a description -->
+    <!-- AIMS -->
     <section>
-        <div class="chart-description">
-            <h2>Section 1: A basic chart</h2>
-            <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
-                We've organised the page into sections, with each section containing a chart, title and a description. Here, we can describe the chart and give some context.
-                As a first example, we're using a basic chart from our repo.
+        <h2>Aims</h2>
+        <div class="project-text">
+            <p>
+                This project examines regional health inequalities in Chile through seven interactive visualisations 
+                covering 2002 to 2022. I quantify geographic disparities, identify their demographic and structural 
+                drivers, and assess whether gaps are narrowing or widening. Beyond crude mortality rates, I explore 
+                age at death to identify regional blue zones and demonstrate automated API-driven data collection to 
+                predict life expectancy.        
             </p>
         </div>
-        <figure id="Location1"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
     </section>
-
-    <section>
-        <div class="chart-description">
-            <h2>Section 2: Inflation and war</h2>
-            <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
-                We've organised the page into sections, with each section containing a chart, title and a description. Here, we can describe the chart and give some context.
-                As a first example, we're using a basic chart from our repo.
-            </p>
-        </div>
-        <figure id="Location2"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
-        <figure id="Location3"></figure>
-    </section>
-
-    <section>
-        <div class="chart-description">
-            <h2>Section 3: UK Whole Economy</h2>
-            <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
-                We've organised the page into sections, with each section containing a chart, title and a description. Here, we can describe the chart and give some context.
-                As a first example, we're using a basic chart from our repo.
-            </p>
-        </div>
-        <figure id="Location4"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
-        
-    </section>
-  
-
-     <section>
-        <div class="chart-description">
-            <h2>Section 4: Shiller PE Ratio</h2>
-            <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
-                We've organised the page into sections, with each section containing a chart, title and a description. Here, we can describe the chart and give some context.
-                As a first example, we're using a basic chart from our repo.
-            </p>
-        </div>
-        <figure id="Location5"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
-        
-    </section>   
-
-    <section>
-        <div class="chart-description">
-            <h2>Section 5: Fertility Rate Korea</h2>
-            <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
-                We've organised the page into sections, with each section containing a chart, title and a description. Here, we can describe the chart and give some context.
-                As a first example, we're using a basic chart from our repo.
-            </p>
-        </div>
-        <figure id="Location6"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
-        
-    </section>   
     
-    <!-- Do you want to add more sections? -->
-        <!-- Try copying pasting the section above -->
-        <!-- You'll need to change the id of the figure "<figure id="Location3"... -->
-        <!-- ... and add a new variable for the graph spec in the script at the bottom of the page -->
+    <!-- CHART 1: CHOROPLETH MAP -->
+    <section>
+        <div class="chart-description">
+            <h2>1. Regional mortality landscape</h2>
+            <p>
+                Chile's south-central regions experienced 8-9 deaths per 1,000 by 2022, compared with around 5 in 
+                northern regions such as Tarapacá and Antofagasta. This 40% gap remains stable over two decades. 
+                COVID hit southern areas hardest, highlighting vulnerabilities in regions with older populations 
+                and weaker health infrastructure.
+            </p>
+        </div>
+        <figure id="Location1"></figure>
+        <div class="data-note">
+            <strong>Data and construction:</strong> Aggregated 2.65M individual mortality records from 
+            <a href="https://deis.minsal.cl/" target="_blank">DEIS</a>, combined with 
+            <a href="https://www.ine.gob.cl/" target="_blank">INE</a> population data. Built using 
+            Vega-Lite choropleth with time slider parameter. 
+            The map Geojson from <a href="https://www.geoportal.cl/catalog" target="_blank">GeoPortal Chile</a><br>
+            <a href="https://colab.research.google.com/drive/1UIt0oQVOUc5tmkMVg2n56xxsb3nOyWGN?usp=sharing" target="_blank">View notebook</a>.
+        </div>
+    </section>
 
+    <!-- CHART 2: INEQUALITY TREND -->
+    <section>
+        <div class="chart-description">
+            <h2>2. The gap is widening</h2>
+            <p>
+                The mortality gap remained around 2.0 deaths per 1,000 from 2002 to 2011. This period coincided with 
+                Chile's 2005 GES (Explicit Health Guarantees) reform, which provided legally binding healthcare rights 
+                for priority conditions. Although GES improved treatment access, it did not reduce regional disparities. 
+                Since 2012, the gap has widened, and COVID-19 significantly accelerated this trend, doubling inequalities 
+                to nearly 4.0 deaths per 1,000 by 2022, the highest in twenty years. 
+            </p>
+        </div>
+        <figure id="Location2"></figure>
+        <div class="data-note">
+            <strong>Data and construction:</strong> Calculated information across 16 regions from aggregated 
+            DEIS/INE data. Vega-Lite area and line charts with interactive hover tooltip.<br>
+            <a href="https://colab.research.google.com/drive/1HWLX1WJgkqV7FjFwh006Z63001IEVBel?usp=sharing" target="_blank">View notebook</a>.
 
-    <!-- This is a script, it's a way to run JavaScript code on the page -->
+        </div>
+    </section>
+
+    <!-- CHART 3: CAUSES BY REGION -->
+    <section>
+        <div class="chart-description">
+            <h2>3. What are the leading causes of death?</h2>
+            <p>
+                Circulatory diseases and cancer drive most deaths in Chile, reflecting the epidemiological shift 
+                to chronic illnesses, typical in ageing populations. COVID became the third-leading cause in 2020-2021. 
+                Regional differences are notable: metropolitan zones have higher cancer mortality, while southern regions 
+                face more respiratory deaths even before COVID. These patterns highlight the need for region-specific 
+                health policies.
+            </p>
+        </div>
+        <figure id="Location3"></figure>
+        <div class="data-note">
+            <strong>Data and construction:</strong> DEIS microdata classified via ICD-10 codes (2002-2022, 
+            n=2.65M). Minor causes grouped to "Other." Vega-Lite with dropdown selector.<br>
+            <a href="https://colab.research.google.com/drive/1UIt0oQVOUc5tmkMVg2n56xxsb3nOyWGN?usp=sharing" target="_blank">View notebook</a>.
+        </div>
+    </section>
+
+    <!-- CHART 4: COVID EXCESS DEATHS -->
+    <section>
+        <div class="chart-description">
+            <h2>4. The COVID-19 shock</h2>
+            <p>
+                To assess COVID's impact on mortality, I built a linear regression model using 26 years of pre-pandemic 
+                data (1994-2019). The model (R² = 0.960) shows a steady increase of about 1,364 deaths annually as 
+                Chile's population ages. Based on this trend, Chile would have had roughly 109,000 deaths in 2020 
+                (126,100 died), and 110,400 in 2021 (137,600 died), with excess mortality totalling 69,600 over three 
+                years (21% increase). 
+            </p>
+        </div>
+        <figure id="Location4"></figure>
+        <div class="data-note">
+            <strong>Data and construction:</strong> National annual mortality totals from DEIS (1994-2022). 
+            Vega-Lite regression transform generates prediction line, rectangle highlights COVID period.<br>
+            <a href="https://colab.research.google.com/drive/158AXsTGy-VZ9ekz5KU2jLwmyoWwobDSL?usp=sharing" target="_blank">View notebook</a>.
+        </div>
+    </section>
+
+    <!-- CHART 5: SWAROOP INDEX -->
+    <section>
+        <div class="chart-description">
+            <h2>5. Age structure as a determinant of mortality</h2>
+            <p>
+                The Swaroop Index measures the percentage of deaths among people aged 50+ (proxy for population ageing). 
+                In Chile, it ranges from 85% in Tarapacá to 92% in Ñuble, as northern mining regions attract younger 
+                people, while southern agricultural areas have aged as youth migrate to cities. <br>
+                A scatter plot shows a positive correlation between demographic composition and mortality rates, 
+                but only explains 45% of the variation (r² = 0.45). Demographics influence outcomes but do not solely 
+                determine them.
+            </p>
+        </div>
+        <figure id="Location5"></figure>
+        <div class="data-note">
+            <strong>Data and construction:</strong> DEIS microdata filtered for age in years (n=108,285 in 2019). 
+            Calculated percentage of deaths in individuals aged 50+ per region. Vega-Lite scatter plot with 
+            sqrt-scaled bubble size representing population; regression layer via transform. <br>
+            <a href="https://colab.research.google.com/drive/1-ui9jjuGeD17CnkTXMtidfJLRa0mKAao?usp=sharing" target="_blank">View notebook</a>.
+        </div>
+    </section>
+
+    <!-- CHART 6: AGE AT DEATH -->
+    <section>
+        <div class="chart-description">
+            <h2>6. Spatial variations in lifespans</h2>
+            <p>
+                Mean age at death varies by 6.2 years across Chilean regions, with Valparaíso at 74.5 years, 
+                known as a blue zone for long-lived populations, and Tarapacá at 68.3 years. Valparaíso has high 
+                crude mortality but an older population, while Tarapacá has the opposite. Coastal regions like 
+                Valparaíso and Coquimbo consistently have the highest longevity, indicating factors beyond healthcare, 
+                such as geography, climate, or lifestyle, influence lifespan. <br>
+                The bars show the interquartile range, the thick line the median, and the circle the mean age.
+            </p>
+        </div>
+        <figure id="Location6"></figure>
+        <div class="data-note">
+            <strong>Data and construction:</strong> DEIS individual death records with age data (2019, n=108,285). 
+            Calculated information of age at death per region. Vega-Lite three layer visualisation: 
+            bar, tick and circle. Sorted descending by mean age. <br>
+            <a href="https://colab.research.google.com/drive/1SLcn8fIhts6pvaOS_KUFTWW-4oxKeLp8?usp=sharing" target="_blank">View notebook</a>.
+        </div>
+    </section>
+
+    <!-- CHART 7: LIFE EXPECTANCY PREDICTION -->
+    <section>
+        <div class="chart-description">
+            <h2>7. Predicting life expectancy</h2>
+            <p>
+                Chile's life expectancy rose from 77 to over 80 years between 2000 and 2019. While a predictive model 
+                trained on this pre-pandemic period (R² = 0.916, RMSE = 0.28 years) demonstrates a strong fit, the 
+                visualisation reveals a break in 2020. The red dashed prediction line continues upward, and actual 
+                life expectancy drops sharply and remains depressed through 2022. This gap quantifies COVID's demographic 
+                toll, showing how a single external shock can reverse decades of health progress. The contrast between 
+                predicted and actual trajectories illustrates the value of baseline models for measuring crisis impacts.
+            </p>
+        </div>
+        <figure id="Location7"></figure>
+        <div class="data-note">
+            <strong>Data and construction:</strong> Life expectancy accessed via 
+            <a href="https://api.worldbank.org/v2/" target="_blank">World Bank API</a> (indicator: 
+            SP.DYN.LE00.IN). Machine learning model trained on 2000-2019 data. Vega-Lite pivot and fold transforms enable 
+            dual line encoding with interactive hover. <br>
+            <a href="https://colab.research.google.com/drive/1pfNbusIAM47C-YxyQigYbjhIfuO4h4R6?usp=sharing" target="_blank">View notebook</a>.
+        </div>
+    </section>
+
+    <!-- DATA, TOOLS AND ANALYTICAL CHALLENGES -->
+    <section>
+        <h2>Data, Tools and Analytical Challenges</h2>
+        <div class="project-text">
+            <p>
+                The dataset includes 2.65 million mortality records from DEIS (1990-2022) processed in Python with 
+                pandas, combined with INE population estimates to calculate regional mortality rates. Life expectancy 
+                and socioeconomic indicators were retrieved via the World Bank API. <br>
+                The main technical challenge was processing millions of records. Initial attempts without low_memory=False caused type inference errors. 
+                After fixing this, I used ICD-10 to classify causes into 13 categories, including COVID-19 (U07.1, U07.2). Standardising geographic names 
+                across DEIS, INE, and GeoJSON formats was also challenging, especially for Magallanes. <br>
+                All visualisations use Vega-Lite with time sliders, regression transforms, conditional encoding, 
+                and interactivity. The full workflow is reproducible via linked GitHub and Colab resources.
+            </p>
+        </div>
+    </section>
+
+    <!-- CONCLUSIONS -->
+    <section>
+        <h2>Conclusions</h2>
+        <div class="project-text">
+            <p>
+                Chile's regional health inequalities are significant, with southern regions experiencing nearly 
+                double the mortality rates of northern areas. Yet longevity patterns reveal important nuance: 
+                Valparaíso achieves the highest age at death (74.5 years) while Tarapacá, despite lower mortality, 
+                shows earlier deaths (68.3 years). This difference between crude rates and actual longevity demonstrates 
+                that high mortality can reflect an aged population rather than poor health outcomes. <br>
+                However, demographic ageing explains 45% of regional variation in mortality, indicating that healthcare 
+                quality and socioeconomic disparities are policy-meaningful issues. COVID exposed these structural 
+                weaknesses, with 69,600 excess deaths falling disproportionately on regions. Chile needs differentiated 
+                regional strategies: southern regions require systems optimised for ageing populations with chronic 
+                diseases, while northern areas need services tailored to younger working populations. The widening gap 
+                documented here should serve as a wake-up call for policymakers.
+            </p>
+        </div>
+    </section>
+
+    <!-- WORD COUNT -->
+    <section>
+        <div style="text-align: center; padding: 20px; background-color: #fafaf9; border-radius: 4px; margin-top: 40px; border-left: 2px solid #c4604f;">
+            <p style="font-family: 'Karla', sans-serif; color: #6b7280; font-size: 14px; margin: 0;">
+                <strong style="color: #3d4144;">Total word count:</strong> 
+                <span id="wordCount" style="color: #c4604f; font-weight: 600; font-size: 16px;">Calculating...</span> 
+                <span style="color: #78716c;">/ 800 words</span>
+            </p>
+        </div>
+    </section>
+
     <script>
-        // This is a comment in JavaScript - it's a different language to HTML and CSS
+        // Chart specifications
+        vegaEmbed('#Location1', "Chile_mortality_map.json", {"renderer": "svg"});
+        vegaEmbed('#Location2', "Regional_gap.json", {"renderer": "svg"});
+        vegaEmbed('#Location3', "Mortality_cause.json", {"renderer": "svg"});
+        vegaEmbed('#Location4', "Covid19_Excess.json", {"renderer": "svg"});
+        vegaEmbed('#Location5', "Swaroop_index.json", {"renderer": "svg"});
+        vegaEmbed('#Location6', "Mean_age.json", {"renderer": "svg"});
+        vegaEmbed('#Location7', "Life_expectancy.json", {"renderer": "svg"});
 
-        let figure_1_spec = "https://raw.githubusercontent.com/EconomicsObservatory/courses/main/2/s2_chart2.json"; // We're storing the URL of the graph we want to display in a variable
-                                                                                                                    // You should have a spec for a graph in this same folder. Just specify its name here, e.g. let figure_1_spec = "chart1.json"
-        let figure_2_spec = "https://raw.githubusercontent.com/EconomicsObservatory/datavis/refs/heads/main/newsletters/2025-06-27-war-and-inflation/visualisation/fig4_inflation-big4.json"
-        let figure_3_spec = "https://raw.githubusercontent.com/EconomicsObservatory/datavis/refs/heads/main/newsletters/2025-05-02-steel-ii-the-price-effect/visualisation/fig1_steel-price.json"
-
-        vegaEmbed('#Location1', figure_1_spec) // We're using the vegaEmbed function to put a graph in the element with id figure_1
-
-        vegaEmbed('#Location2', figure_2_spec)
-        vegaEmbed('#Location3', figure_3_spec)
-        vegaEmbed('#Location4', "New_chart.json")
-        vegaEmbed('#Location5', "shiller_pe_ratio_chart.json")
-        vegaEmbed('#Location6', "TRF_live_chart.json")
-
-
-        console.log("0")
-        console.log("1")
-
-        let chart_spaces = [
-            "https://raw.githubusercontent.com/EconomicsObservatory/courses/main/2/s2_chart2.json",
-            "https://raw.githubusercontent.com/EconomicsObservatory/datavis/refs/heads/main/newsletters/2025-06-27-war-and-inflation/visualisation/fig4_inflation-big4.json",
-            "https://raw.githubusercontent.com/EconomicsObservatory/datavis/refs/heads/main/newsletters/2025-05-02-steel-ii-the-price-effect/visualisation/fig1_steel-price.json",
-            "New_chart.json",
-            "shiller_pe_ratio_chart.json",
-            "TRF_live_chart.json"
-        ]
-
-        let chart_destinations = [
-        "   #Location1",
-            "#Location2",
-            "#Location3",
-            "#Location4",
-            "#Location5", 
-            "#Location6"
-        ]
-        let cities = ["London", "Paris", "Milan", "Santiago"]
-
-        for (let i = 0; i < 4; i = i+1) {
-            console.log("CHART Spec at: "+chart_spaces[i])
-            console.log("CHART destination at: "+chart_destinations[i])
-
+        // Word counter - includes chart descriptions AND project text
+        function countWords() {
+            const projectTextElements = document.querySelectorAll('.project-text, .chart-description p');
+            let totalWords = 0;
+            
+            projectTextElements.forEach(element => {
+                const text = element.innerText || element.textContent;
+                const words = text.trim().split(/\s+/).filter(word => word.length > 0);
+                totalWords += words.length;
+            });
+            
+            const wordCountElement = document.getElementById('wordCount');
+            if (wordCountElement) {
+                wordCountElement.textContent = totalWords;
+                
+                if (totalWords > 800) {
+                    wordCountElement.style.color = '#e74c3c';
+                } else {
+                    wordCountElement.style.color = '#059669';
+                }
+            }
         }
-        // Do you want to add more graphs?
-        // try defining a new variable for figure_3_spec, adding VegaEmbed for Location3, and adding a new section in the HTML
-        // e.g. 
-        // let figure_3_spec = ...
-        // vegaEmbed('#Location3', figure_3_spec)
-
-
+        
+        window.addEventListener('load', countWords);
     </script>
 
 </body>

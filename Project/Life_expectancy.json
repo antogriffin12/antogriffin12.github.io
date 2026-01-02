@@ -1,0 +1,134 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Life expectancy in Chile using machine learning model fit",
+    "subtitle": "R² = 0.916 | RMSE = 0.28 years | Data: World Bank API (2000-2022)",
+    "anchor": "start",
+    "font": "Lora",
+    "fontSize": 18,
+    "color": "#1f2937",
+    "subtitleFont": "Karla",
+    "subtitleFontSize": 13,
+    "subtitleColor": "#6b7280"
+  },
+  "width": 700,
+  "height": 400,
+  "config": {
+    "axis": {
+      "labelFont": "Karla",
+      "titleFont": "Karla",
+      "labelColor": "#6b7280",
+      "titleColor": "#3d4144",
+      "gridOpacity": 0.25,
+      "gridColor": "#e5e7eb"
+    },
+    "legend": {
+      "labelFont": "Karla",
+      "titleFont": "Karla",
+      "labelColor": "#6b7280",
+      "titleColor": "#3d4144"
+    },
+    "view": {"strokeWidth": 0}
+  },
+  "data": {
+    "values": [
+      {"year": 2000, "type": "Actual Data", "value": 77.128},
+      {"year": 2003, "type": "Actual Data", "value": 77.884},
+      {"year": 2006, "type": "Actual Data", "value": 78.533},
+      {"year": 2009, "type": "Actual Data", "value": 78.89},
+      {"year": 2011, "type": "Actual Data", "value": 79.236},
+      {"year": 2013, "type": "Actual Data", "value": 79.551},
+      {"year": 2015, "type": "Actual Data", "value": 80.008},
+      {"year": 2017, "type": "Actual Data", "value": 80.61},
+      {"year": 2020, "type": "Actual Data", "value": 79.349},
+      {"year": 2022, "type": "Actual Data", "value": 79.176},
+      {"year": 2000, "type": "Model Fit", "value": 77.52238431575104},
+      {"year": 2003, "type": "Model Fit", "value": 77.54998021294917},
+      {"year": 2006, "type": "Model Fit", "value": 78.44753096946295},
+      {"year": 2009, "type": "Model Fit", "value": 78.83648096762825},
+      {"year": 2011, "type": "Model Fit", "value": 79.07781193739287},
+      {"year": 2013, "type": "Model Fit", "value": 79.92333082057681},
+      {"year": 2015, "type": "Model Fit", "value": 80.10065944765994},
+      {"year": 2017, "type": "Model Fit", "value": 80.11612729528282},
+      {"year": 2020, "type": "Model Fit", "value": 79.61021471100771},
+      {"year": 2022, "type": "Model Fit", "value": 79.1804793222885}
+    ]
+  },
+  "transform": [
+    {
+      "pivot": "type",
+      "value": "value",
+      "groupby": ["year"]
+    }
+  ],
+  "layer": [
+    {
+      "transform": [
+        {"fold": ["Actual Data", "Model Fit"], "as": ["type", "value"]}
+      ],
+      "encoding": {
+        "x": {
+          "field": "year",
+          "type": "quantitative",
+          "title": "Year",
+          "axis": {"format": "d", "tickMinStep": 1}
+        },
+        "y": {
+          "field": "value",
+          "type": "quantitative",
+          "scale": {"domain": [76, 82]},
+          "title": "Life Expectancy (years)"
+        },
+        "color": {
+          "field": "type",
+          "type": "nominal",
+          "scale": {
+            "domain": ["Actual Data", "Model Fit"],
+            "range": ["#3b82f6", "#c4604f"]
+          },
+          "legend": {"title": null, "orient": "bottom"}
+        },
+        "strokeDash": {
+          "field": "type",
+          "type": "nominal",
+          "scale": {"domain": ["Actual Data", "Model Fit"], "range": [[0], [4, 4]]},
+          "legend": null
+        }
+      },
+      "layer": [
+        {"mark": {"type": "line", "strokeWidth": 3}},
+        {
+          "transform": [{"filter": {"param": "hover_sel", "empty": false}}],
+          "mark": {"type": "point", "size": 100, "filled": true, "stroke": "white", "strokeWidth": 1}
+        }
+      ]
+    },
+    {
+      "mark": {"type": "rule", "color": "#1f2937"},
+      "encoding": {
+        "x": {"field": "year", "type": "quantitative"},
+        "opacity": {
+          "condition": {"param": "hover_sel", "empty": false, "value": 0.2},
+          "value": 0
+        },
+        "tooltip": [
+          {"field": "year", "type": "quantitative", "title": "Year", "format": "d"},
+          {"field": "Actual Data", "type": "quantitative", "title": "Actual Data", "format": ".2f"},
+          {"field": "Model Fit", "type": "quantitative", "title": "Model Fit", "format": ".2f"}
+        ]
+      },
+      "params": [
+        {
+          "name": "hover_sel",
+          "select": {
+            "type": "point",
+            "fields": ["year"],
+            "nearest": true,
+            "on": "pointerover",
+            "clear": "pointerout"
+          }
+        }
+      ]
+    }
+  ]
+}

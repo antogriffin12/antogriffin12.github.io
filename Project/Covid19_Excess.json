@@ -1,0 +1,188 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.20.1.json",
+  "width": 700,
+  "height": 400,
+  "title": {
+    "text": "COVID-19 mortality shock in Chile",
+    "subtitle": [
+      "De-trended analysis with Excess Death Calculation (1994-2022)",
+      "Total excess deaths: 69,633 (+21.0%) | Peak: 2021 (137,627 deaths)",
+      "Regression model: y = 1363.7x + -2645709.8 (R² = 0.960, p < 0.001)"
+    ],
+    "font": "Lora",
+    "fontSize": 18,
+    "color": "#1f2937",
+    "subtitleFont": "Karla",
+    "subtitleFontSize": 13,
+    "subtitleColor": "#6b7280"
+  },
+  "config": {
+    "view": {"strokeWidth": 0},
+    "axis": {
+      "gridOpacity": 0.25,
+      "labelFont": "Karla",
+      "titleFont": "Karla",
+      "labelFontSize": 11,
+      "titleFontSize": 12,
+      "labelColor": "#6b7280",
+      "titleColor": "#3d4144",
+      "gridColor": "#e5e7eb"
+    }
+  },
+  "layer": [
+    {
+      "data": {"name": "data-022f3e0bc75d89cb87721e800594fb2a"},
+      "mark": {"type": "rect", "color": "#e7b8af", "opacity": 0.2},
+      "encoding": {
+        "x": {
+          "field": "start",
+          "scale": {"domain": [1994, 2022]},
+          "type": "quantitative"
+        },
+        "x2": {"field": "end"}
+      }
+    },
+    {
+      "data": {"name": "data-e3ebb1b1880171318d56d97923bb5658"},
+      "mark": {"type": "area", "color": "#c4604f", "opacity": 0.25},
+      "encoding": {
+        "x": {
+          "field": "year",
+          "scale": {"domain": [1994, 2022]},
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "expected",
+          "scale": {"domain": [70000, 140000]},
+          "type": "quantitative"
+        },
+        "y2": {"field": "actual"}
+      }
+    },
+    {
+      "data": {"name": "data-1120b9e135a661f0db572a588482bdfc"},
+      "mark": {
+        "type": "line",
+        "color": "#78716c",
+        "size": 2.5,
+        "strokeDash": [5, 5]
+      },
+      "encoding": {
+        "x": {
+          "axis": {"format": "d", "tickCount": 15},
+          "field": "year",
+          "scale": {"domain": [1994, 2022]},
+          "title": "Year",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "expected",
+          "scale": {"domain": [70000, 140000]},
+          "title": "Annual Deaths",
+          "type": "quantitative"
+        }
+      }
+    },
+    {
+      "data": {"name": "data-1120b9e135a661f0db572a588482bdfc"},
+      "mark": {
+        "type": "line",
+        "color": "#9f5444",
+        "size": 3
+      },
+      "encoding": {
+        "x": {
+          "field": "year",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "actual",
+          "type": "quantitative"
+        }
+      }
+    },
+    {
+      "data": {"name": "data-1120b9e135a661f0db572a588482bdfc"},
+      "transform": [
+        {"calculate": "datum.actual - datum.expected", "as": "calc_excess"}
+      ],
+      "layer": [
+        {
+          "mark": {"type": "rule", "color": "#1f2937"},
+          "params": [
+            {
+              "name": "hover",
+              "select": {
+                "type": "point",
+                "fields": ["year"],
+                "nearest": true,
+                "on": "pointerover",
+                "clear": "pointerout"
+              }
+            }
+          ],
+          "encoding": {
+            "x": {"field": "year", "type": "quantitative"},
+            "opacity": {
+              "condition": {"param": "hover", "empty": false, "value": 0.2},
+              "value": 0
+            },
+            "tooltip": [
+              {"field": "year", "type": "quantitative", "title": "Year", "format": "d"},
+              {"field": "actual", "type": "quantitative", "title": "Actual Deaths", "format": ","},
+              {"field": "expected", "type": "quantitative", "title": "Expected (Trend)", "format": ","},
+              {"field": "calc_excess", "type": "quantitative", "title": "Excess Deaths", "format": ","}
+            ]
+          }
+        },
+        {
+          "transform": [{"filter": {"param": "hover", "empty": false}}],
+          "mark": {"type": "point", "size": 80, "filled": true, "color": "#9f5444"},
+          "encoding": {
+            "x": {"field": "year", "type": "quantitative"},
+            "y": {"field": "actual", "type": "quantitative"}
+          }
+        }
+      ]
+    }
+  ],
+  "datasets": {
+    "data-022f3e0bc75d89cb87721e800594fb2a": [{"start": 2019.5, "end": 2022.5}],
+    "data-e3ebb1b1880171318d56d97923bb5658": [
+      {"year": 2020, "actual": 126160, "expected": 109009, "excess": 17150},
+      {"year": 2021, "actual": 137627, "expected": 110373, "excess": 27253},
+      {"year": 2022, "actual": 136966, "expected": 111736, "excess": 25229}
+    ],
+    "data-1120b9e135a661f0db572a588482bdfc": [
+      {"year": 1994, "actual": 75416, "expected": 73552},
+      {"year": 1995, "actual": 78511, "expected": 74916},
+      {"year": 1996, "actual": 79109, "expected": 76280},
+      {"year": 1997, "actual": 78461, "expected": 77643},
+      {"year": 1998, "actual": 80243, "expected": 79007},
+      {"year": 1999, "actual": 81964, "expected": 80371},
+      {"year": 2000, "actual": 78796, "expected": 81735},
+      {"year": 2001, "actual": 81858, "expected": 83098},
+      {"year": 2002, "actual": 81071, "expected": 84462},
+      {"year": 2003, "actual": 83657, "expected": 85826},
+      {"year": 2004, "actual": 86128, "expected": 87189},
+      {"year": 2005, "actual": 86096, "expected": 88553},
+      {"year": 2006, "actual": 85633, "expected": 89917},
+      {"year": 2007, "actual": 92996, "expected": 91281},
+      {"year": 2008, "actual": 90164, "expected": 92644},
+      {"year": 2009, "actual": 91965, "expected": 94008},
+      {"year": 2010, "actual": 97927, "expected": 95372},
+      {"year": 2011, "actual": 94982, "expected": 96735},
+      {"year": 2012, "actual": 98710, "expected": 98099},
+      {"year": 2013, "actual": 99767, "expected": 99463},
+      {"year": 2014, "actual": 101949, "expected": 100827},
+      {"year": 2015, "actual": 103318, "expected": 102190},
+      {"year": 2016, "actual": 104023, "expected": 103554},
+      {"year": 2017, "actual": 106387, "expected": 104918},
+      {"year": 2018, "actual": 106793, "expected": 106282},
+      {"year": 2019, "actual": 109656, "expected": 107645},
+      {"year": 2020, "actual": 126160, "expected": 109009},
+      {"year": 2021, "actual": 137627, "expected": 110373},
+      {"year": 2022, "actual": 136966, "expected": 111736}
+    ]
+  }
+}

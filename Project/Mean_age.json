@@ -1,0 +1,113 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Longevity varies across Chile",
+    "subtitle": "Mean and median age at death by region, 2019",
+    "anchor": "start",
+    "font": "Lora",
+    "fontSize": 18,
+    "color": "#1f2937",
+    "subtitleFont": "Karla",
+    "subtitleFontSize": 13,
+    "subtitleColor": "#6b7280"
+  },
+  "width": 600,
+  "height": 500,
+  "config": {
+    "axis": {
+      "labelFont": "Karla",
+      "titleFont": "Karla",
+      "labelColor": "#6b7280",
+      "titleColor": "#3d4144",
+      "gridOpacity": 0.25,
+      "gridColor": "#e5e7eb"
+    },
+    "legend": {
+      "labelFont": "Karla",
+      "titleFont": "Karla",
+      "labelColor": "#6b7280",
+      "titleColor": "#3d4144"
+    },
+    "view": {"strokeWidth": 0}
+  },
+  "data": {
+    "url": "https://raw.githubusercontent.com/antogriffin12/antogriffin12.github.io/refs/heads/main/Project/data/age_at_death_by_region_2019.csv"
+  },
+  "encoding": {
+    "y": {
+      "field": "region_clean",
+      "type": "nominal",
+      "title": null,
+      "sort": {"field": "mean_age", "order": "descending"},
+      "axis": {"labelLimit": 250, "labelFontSize": 11}
+    },
+    "color": {
+      "field": "zona",
+      "type": "nominal",
+      "scale": {
+        "domain": ["North", "Center", "South"],
+        "range": ["#e67e22", "#78716c", "#3b82f6"]
+      },
+      "legend": {
+        "title": "Geographic Zone",
+        "orient": "bottom", 
+        "direction": "horizontal"
+      }
+    },
+    "tooltip": [
+      {"field": "region_clean", "type": "nominal", "title": "Region"},
+      {
+        "field": "mean_age",
+        "type": "quantitative",
+        "title": "Mean Age",
+        "format": ".1f"
+      },
+      {
+        "field": "median_age",
+        "type": "quantitative",
+        "title": "Median Age",
+        "format": ".1f"
+      },
+      {
+        "field": "q25",
+        "type": "quantitative",
+        "title": "25th percentile",
+        "format": ".1f"
+      },
+      {
+        "field": "q75",
+        "type": "quantitative",
+        "title": "75th percentile",
+        "format": ".1f"
+      },
+      {
+        "field": "deaths",
+        "type": "quantitative",
+        "title": "Total Deaths",
+        "format": ","
+      }
+    ]
+  },
+  "layer": [
+    {
+      "mark": {"type": "bar", "opacity": 0.2},
+      "encoding": {
+        "x": {
+          "field": "q25",
+          "type": "quantitative",
+          "scale": {"domain": [55, 90]},
+          "title": "Age at Death (years)"
+        },
+        "x2": {"field": "q75"}
+      }
+    },
+    {
+      "mark": {"type": "tick", "thickness": 3, "color": "#1f2937"},
+      "encoding": {"x": {"field": "median_age", "type": "quantitative"}}
+    },
+    {
+      "mark": {"type": "circle", "size": 120, "opacity": 0.9},
+      "encoding": {"x": {"field": "mean_age", "type": "quantitative"}}
+    }
+  ]
+}
