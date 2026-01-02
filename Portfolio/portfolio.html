@@ -62,13 +62,17 @@
             <h2>Section 1: Adding two graphs using vegaEmbed function</h2>
             <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
                 In this section I add two charts using the vegaEmbed function. Both graphs are from RDeconomist.github.io.<br>
-                The first graph shows projected cumulative population changes from 2020 to 2100, with several countries, especially South Korea, Japan, Italy, Spain and France experiencing significant long-term declines. 
-                In contrast, the United States and the United Kingdom are expected to maintain moderate population growth over the century.
+            </p>
+            <p>
+                This choropleth map displays economic disparities through GDP per capita (PPP). 
+                Developed nations (North America, Western Europe, Australia) show the highest values (yellow shades, ~$100,000), while Sub-Saharan Africa exhibits the lowest (dark purple, $1,000-$10,000). 
+                Latin America and Asia fall in intermediate ranges, highlighting the persistent North-South economic divide.
             </p>
         </div>
         <figure id="Location1"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
             <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
-                The second graph shows how different categories contribute to the UK CPIH consumer basket over time, with Housing & Utilities consistently making up the largest share at around 30%. Other categories such as Food, Transport, and Recreation fluctuate moderately, while items like Education, Hotels, and Communication remain relatively small and stable components of overall household spending.
+                These panels (2000, 2010, 2020) show productivity heterogeneity among small firms (1-25 employees). Productivity dispersion increases with firm size, particularly between the 90th and 10th percentiles. Over two decades, the gap between high and low-productivity firms widens, suggesting growing inequality in productive capabilities within the small business sector.
+            </p>
         </div>
         <figure id="Location2"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
     </section>
@@ -309,6 +313,7 @@
                 The dataset contains millions of records that were aggregated and combined with INE population data 
                 to calculate mortality rates. <br>
                 Mortality data: <a href="https://deis.minsal.cl/" target="_blank">DEIS - Ministerio de Salud de Chile</a><br>
+                The map Geojson: <a href="https://www.geoportal.cl/catalog" target="_blank">GeoPortal Chile</a><br>
                 Population data: <a href="https://www.ine.cl/estadisticas/sociales/demografia-y-vitales/proyecciones-de-poblacion" target="_blank">INE Chile</a><br>
                 The link to my Colab Notebook: <a href= "https://colab.research.google.com/drive/1UIt0oQVOUc5tmkMVg2n56xxsb3nOyWGN?usp=sharing" target="_blank">Colab Interactive charts link</a>  <br>
                 The following choropleth map allows to explore how mortality rates evolved across Chilean regions 
