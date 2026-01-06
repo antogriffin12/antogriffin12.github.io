@@ -271,14 +271,14 @@
     <section>
         <div class="chart-description">
             <h2>Section 7: Maps: Base maps and choropleths.</h2>
-            <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
+            <p> 
                 I chose to make a choropleth map of Wales showing an estimation of the average household income in 2023 at the Middle Layer Super Output Area (MSOA) level. The data was produced by the Office for National Statistics (ONS) using small area income estimates based on the Family Resources Survey. The link to the data source: <a href= "https://www.ons.gov.uk/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/bulletins/smallareamodelbasedincomeestimates/financialyearending2023" target="_blank">Data Source ONS</a>
               
             </p>
 
         <figure id="Location12"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
         <div>
-            <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
+            <p> 
                 I also created a coordinate map of Scotland showing the location of all schools, differentiated by school type (Primary, Secondary, and Special) and sized by pupil enrollment. The data was created by the Scottish Government and was last updated on 27 February 2025. The link to the data source: <a href= "https://www.data.gov.uk/dataset/9a6f9d86-9698-4a5d-a2c8-89f3b212c52c/scottish-school-roll-and-locations" target="_blank">Data Source Scottish Government</a>
             </p>
         <figure id="Location13"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
@@ -289,13 +289,13 @@
     <section>
         <div class="chart-description">
             <h2>Section 8: Big Data analysis in UK supermarket prices</h2>
-            <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
+            <p> 
                 Using the AutoCPI dataset of UK supermarket prices, I classified products into essential (milk, bread, eggs, rice, pasta) and non-essential (chocolate, crisps, sweets, ice cream) categories. I then aggregated daily prices by category to create a time-series comparison and analysed the last 30 days' price distribution. The link to the Colab Notebook: <a href= "https://colab.research.google.com/drive/1-aZeQGgZAF33CAxPNJnaGYG9YJ4ORQWZ?usp=sharing" target="_blank">Colab Big Data link</a>  <br>
                 The first chart shows price evolution over time, revealing that non-essential products 
                 consistently cost more.
             </p>
         <figure id="Location14"></figure>
-            <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
+            <p> 
                 The second chart displays the price distribution using box plots for the last 30 days of data, showing that non-essential products have higher median prices and greater price variability.
             </p>
         <figure id="Location15"></figure>
@@ -307,7 +307,7 @@
     <section>
         <div class="chart-description">
             <h2>Section 9: Interactive Charts - Mortality Analysis in Chile</h2>
-            <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
+            <p> 
                 I created two interactive visualisations analysing mortality patterns across Chilean regions 
                 from 2002-2022 using individual death records from DEIS (Departamento de Estadísticas e Información de Salud). 
                 The dataset contains millions of records that were aggregated and combined with INE population data 
@@ -321,7 +321,7 @@
                 with southern regions generally showing higher mortality rates than northern regions. 
             </p>
         <figure id="Location16"></figure>
-            <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
+            <p> 
                 This line chart uses a dropdown menu to select regions and displays mortality trends by cause of death 
                 (based on ICD-10 classification). The visualisation shows that circulatory diseases and tumors are 
                 consistently the leading causes across all regions, though their relative importance varies. 
@@ -335,7 +335,7 @@
     <section>
         <div class="chart-description">
             <h2>Section 10: Advanced Analysis and Machine Learning</h2>
-            <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
+            <p> 
                 For the Advanced analytics task I wanted to check the hypothesis that COVID-19 created an unprecedented mortality shock in Chile, with excess deaths significantly exceeding pre-pandemic trends from 1994-2019.<br>
                 I used a De-trended shock analysis using OLS regression on pre-pandemic baseline (1994-2019) to establish expected mortality trend, then calculating excess deaths during COVID-19 period (2020-2022). 
                 Data source: DEIS Chile (N = 2,756,333 deaths). <br>
@@ -344,7 +344,7 @@
                 The link to the Google Colab Notebook is: <a href="https://colab.research.google.com/drive/158AXsTGy-VZ9ekz5KU2jLwmyoWwobDSL?usp=sharing" target="_blank">Colab Advanced Analytics Link</a>
             </p>
         <figure id="Location18"></figure>
-            <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
+            <p> 
                 For this task, I built a predictive model using Linear Regression to forecast life expectancy in Chile from socioeconomic factors. I accessed real-time data from World Bank APIs for GDP per capita, poverty rate, health and education expenditure (2000-2022). 
                 The chart shows historical data and model predictions, achieving R²=0.916 with 0.23-year average error. Health expenditure emerged as the strongest predictor. <br>
                 The Google Colab link: <a href="https://colab.research.google.com/drive/1pfNbusIAM47C-YxyQigYbjhIfuO4h4R6?usp=sharing" target="_blank">Colab Machine Learning link</a>
@@ -354,11 +354,16 @@
 
     </section>
 
-    
-    <!-- Do you want to add more sections? -->
-        <!-- Try copying pasting the section above -->
-        <!-- You'll need to change the id of the figure "<figure id="Location3"... -->
-        <!-- ... and add a new variable for the graph spec in the script at the bottom of the page -->
+    <!-- AI DISCLOSURE NOTE -->
+    <section>
+        <div style="padding: 15px 20px; background-color: #f9fafb; border-radius: 4px; margin-top: 20px; border-left: 2px solid #9ca3af;">
+            <p style="font-family: 'Karla', sans-serif; color: #6b7280; font-size: 12px; margin: 0; font-style: italic;">
+                <strong style="color: #3d4144;">Note:</strong> AI assistance (Claude) was used in this project 
+                for code debugging and refining visualisation specifications. All 
+                analytical decisions, data interpretation, and conclusions are my own.
+            </p>
+        </div>
+    </section>
 
 
     <!-- This is a script, it's a way to run JavaScript code on the page -->
